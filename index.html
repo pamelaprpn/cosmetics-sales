@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O Boticário</title>
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     
 </head>
 <body>
@@ -37,12 +38,35 @@
                 <img src="./assets/carrinho-de-compras.png" alt="">
                 <p>Meu carrinho</p></a>
             </li>
-        </ul>
-        
-
+        </ul>       
     </header>
 
     <main>
+
+        <div class="carrossel_container">
+            <div class="swiper">
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+        
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img src="assets/promo1.png" alt="Promoção 1"></div>
+                    <div class="swiper-slide"><img src="assets/promo2.png" alt="Promoção 2"></div>
+                    <div class="swiper-slide"><img src="assets/promo3.png" alt="Promoção 3"></div>
+                    <div class="swiper-slide"><img src="assets/promo4.png" alt="Promoção 4"></div>
+                    <div class="swiper-slide"><img src="assets/promo5.png" alt="Promoção 5"></div>
+                    
+                    ...
+                </div>
+        
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+        
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
 
     </main>
 
@@ -53,6 +77,24 @@
     <footer>
 
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ 
+    <script>
+        const swiper = new Swiper('.swiper', {
+            spaceBetween: 10,
+            slidesPerView: 1,
+            autoplay: {
+            delay: 2000,
+            },
+
+            pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            },
+
+        });
+    </script>
     
 </body>
 </html>
