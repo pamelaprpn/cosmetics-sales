@@ -18,7 +18,7 @@
     height: 60px;
 }
 
-.logo h1{
+.titulo{
     font-family: var(--font-logo);
     font-weight: 700;
     color: var(--cor-cinza)
@@ -31,11 +31,11 @@
    gap: 20px;
 }
 
-.item{
+.item a{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     color: var(--cor-cinza);
 }
 
@@ -45,4 +45,17 @@
 
 .link{
     text-decoration: none;
+}
+
+.item p,
+.titulo{
+    display: none;
+}
+
+@media screen and (min-width: 1024px){
+    
+    .item p,
+    .titulo{
+        display: block;
+    }
 }
