@@ -1,4 +1,15 @@
 
-.swiper-slide img{
-    background-position: center;
+.swiper-wrapper img{
+    width: 100%;
+}
+
+
+
+.swiper-pagination{
+    position: initial;
+    margin: .5em 0;
+}
+
+.swiper-scrollbar{
+    display: none;
 }
