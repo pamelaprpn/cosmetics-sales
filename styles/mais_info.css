@@ -1,0 +1,33 @@
+.mais_info{
+    display: flex;
+    justify-content: space-around;
+    align-items:flex-start;
+    background-color: var(--cor-verde);
+    padding: 2em;
+}
+
+.info_columm{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.info_columm a{
+    text-decoration: none;
+    color: var(--cor-fundo);
+    padding: .5em;
+}
+
+.info_title{
+    color: var(--cor-laranja);
+}
+
+.rodape{
+    background: var(--cor-fundo);
+    padding: 2em;
+}
+
+.rodape p{
+    text-align: center;
+    color: var(--cor-cinza);
+}
