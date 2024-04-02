@@ -39,6 +39,25 @@
     color: var(--cor-cinza);
 }
 
+.icon_cart{
+    position: relative;
+}
+
+.icon_cont{
+    display: flex;
+    width: 25px;
+    height: 25px;
+    background-color: var(--cor-laranja);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    
+}
+
 .container_links li{
     list-style-type: none;
 }

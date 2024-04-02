@@ -6,6 +6,7 @@
     <title>Dona de Si Cosmetics</title>
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script></script>
     
 </head>
 <body>
@@ -35,8 +36,10 @@
             </li>
             <li class="item">
                 <a href="#" class="link">
-                <img src="./assets/cart-shopping-solid.svg" alt="">
-                <span>0</span>
+                <div class="icon_cart">
+                    <img src="./assets/cart-shopping-solid.svg" alt="">
+                    <span class="icon_cont">0</span>
+                </div>
                 <p>Meu carrinho</p></a>
             </li>
         </ul>       
@@ -204,6 +207,19 @@
             },
 
         });
+    </script>
+    <script>
+        let iconCartSpan = document.getElementById('.icon_cont')
+        let buttonCart = document.querySelector('.card_button')
+
+        
+
+        buttonCart.addEventListener('click', (event) => {
+            
+        })
+
+        
+
     </script>
     
 </body>
