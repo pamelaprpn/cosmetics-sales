@@ -1,10 +1,26 @@
-.produtos{
-    display: grid;
+.container_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+.container_produts{
+    display: flex;
     justify-content: space-around;
     grid-template-columns: auto auto auto;
     gap: 2em;
     margin: 3em;
 }
+
+.title_section{
+    font-family: var(--font-logo);
+    color: var(--cor-cinza);
+    text-align: center;
+}
+
 
 .card{ 
     border-radius: 10px; 

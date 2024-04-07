@@ -1,48 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dona de Si Cosmetics</title>
     <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script></script>
-    
+
 </head>
+
 <body>
 
     <header class="menu">
-        <div class="logo">
-            <img src="./assets/logoBoticario.png" alt="">
-            <h1 class="titulo">Dona de Si Cosmetics</h1>
-        </div>
 
+        <div class="container_menu">
+            <div class="logo">
+                <img src="./assets/logoBoticario.png" alt="">
+                <h1 class="titulo">Dona de Si Cosmetics</h1>
+            </div>
         
-        <ul class="container_links">
-            <li class="item">
-                <a href="#" class="link">
-                <img src="./assets/location-dot-solid.svg" alt="">
-                <p>Informe sua Localização</p></a> 
-            </li>
-            <li class="item">
-                <a href="#" class="link">
-                <img src="./assets/user-solid.svg" alt="">
-                <p>Minha Conta</p></a>
-            </li>
-            <li class="item">
-                <a href="#" class="link">
-                <img src="./assets/heart-solid.svg" alt="">
-                <p>Favoritos</p></a>
-            </li>
-            <li class="item">
-                <a href="#" class="link">
-                <div class="icon_cart">
-                    <img src="./assets/cart-shopping-solid.svg" alt="">
-                    <span class="icon_cont">0</span>
-                </div>
-                <p>Meu carrinho</p></a>
-            </li>
-        </ul>       
+        
+            <ul class="container_links">
+                <li class="item">
+                    <a href="#" class="link">
+                        <img src="./assets/location-dot-solid.svg" alt="">
+                        <p>Informe sua Localização</p>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#" class="link">
+                        <img src="./assets/user-solid.svg" alt="">
+                        <p>Minha Conta</p>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#" class="link">
+                        <img src="./assets/heart-solid.svg" alt="">
+                        <p>Favoritos</p>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#" class="link">
+                        <div class="icon_cart">
+                            <img src="./assets/cart-shopping-solid.svg" alt="">
+                            <span class="icon_cont">0</span>
+                        </div>
+                        <p>Meu carrinho</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <nav>
+            <ul class="container_nav">
+                <li class="item_nav"><a href="#">LANÇAMENTOS</a></li>
+                <li class="item_nav"><a href="#">PROMOÇÕES</a></li>
+                <li class="item_nav"><a href="#">PRESENTES</a></li>
+                <li class="item_nav"><a href="#">PERFUMARIA</a></li>
+                <li class="item_nav"><a href="#">CORPO E BANHO</a></li>
+                <li class="item_nav"><a href="#">MAQUIAGEM</a></li>
+                <li class="item_nav"><a href="#">CABELOS</a></li>
+                <li class="item_nav"><a href="#">SKINCARE</a></li>
+            </ul>
+        </nav>
+       
     </header>
 
     <main>
@@ -51,7 +73,7 @@
             <div class="swiper">
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
-        
+
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
@@ -60,18 +82,19 @@
                     <div class="swiper-slide"><img src="assets/promo3.png" alt="Promoção 3"></div>
                     <div class="swiper-slide"><img src="assets/promo4.png" alt="Promoção 4"></div>
                     <div class="swiper-slide"><img src="assets/promo5.png" alt="Promoção 5"></div>
-                    
+
                     ...
                 </div>
-         
-        
+
+
                 <!-- If we need scrollbar -->
                 <div class="swiper-scrollbar"></div>
             </div>
 
     </main>
-
-    <section class="produtos">
+<section class="container_section">
+    <h2 class="title_section">Últimos Lançamentos</h2>
+    <div class="container_produts">
         <div class="card">
             <div class="image">
                 <img class="card_image" src="./assets/casa214.png" alt="">
@@ -111,46 +134,53 @@
                 </a>
             </div>
         </div>
-        <div class="card">
-            <div class="image">
-                <img class="card_image" src="./assets/nativaSpa.png" alt="">
+    </div>
+</section>
+
+    <section class="container_section">
+        <h2 class="title_section">Mais Procurados!</h2>
+        <div class="container_produts">
+            <div class="card">
+                <div class="image">
+                    <img class="card_image" src="./assets/nativaSpa.png" alt="">
+                </div>
+                <div class="info">
+                    <h2 class="card_titulo">Acquagel Hidratante Desodorante Corporal Nativa SPA Ameixa 250g</h2>
+                    <p class="card_valor">R$ 110,00</p>
+                    <a class="card_button" href="">
+                        <img src="./assets/cart-plus-solid.svg" alt="">
+                        <p>Comprar</p>
+                    </a>
+                </div>
             </div>
-            <div class="info">
-                <h2 class="card_titulo">Acquagel Hidratante Desodorante Corporal Nativa SPA Ameixa 250g</h2>
-                <p class="card_valor">R$ 110,00</p>
-                <a class="card_button" href="">
-                    <img src="./assets/cart-plus-solid.svg" alt="">
-                    <p>Comprar</p>
-                </a>
+            <div class="card">
+                <div class="image">
+                    <img class="card_image" src="./assets/portinari.png" alt="">
+                </div>
+                <div class="info">
+                    <h2 class="card_titulo">Boticollection Portinari Desodorante Colônia 100ml</h2>
+                    <p class="card_valor">R$ 124,00</p>
+                    <a class="card_button" href="">
+                        <img src="./assets/cart-plus-solid.svg" alt="">
+                        <p>Comprar</p>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img class="card_image" src="./assets/malbec.png" alt="">
+                </div>
+                <div class="info">
+                    <h2 class="card_titulo">Malbec Ultra Bleu Desodorante Colônia 100ml</h2>
+                    <p class="card_valor">R$ 136,00</p>
+                    <a class="card_button" href="">
+                        <img src="./assets/cart-plus-solid.svg" alt="">
+                        <p>Comprar</p>
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="card">
-            <div class="image">
-                <img class="card_image" src="./assets/portinari.png" alt="">
-            </div>
-            <div class="info">
-                <h2 class="card_titulo">Boticollection Portinari Desodorante Colônia 100ml</h2>
-                <p class="card_valor">R$ 124,00</p>
-                <a class="card_button" href="">
-                    <img src="./assets/cart-plus-solid.svg" alt="">
-                    <p>Comprar</p>
-                </a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="image">
-                <img class="card_image" src="./assets/malbec.png" alt="">
-            </div>
-            <div class="info">
-                <h2 class="card_titulo">Malbec Ultra Bleu Desodorante Colônia 100ml</h2>
-                <p class="card_valor">R$ 136,00</p>
-                <a class="card_button" href="">
-                    <img src="./assets/cart-plus-solid.svg" alt="">
-                    <p>Comprar</p>
-                </a>
-            </div>
-        </div>
-    </section>
+        </section>
 
     <section class="mais_info">
         <div class="info_columm">
@@ -158,7 +188,7 @@
             <a href="#">Dúvidas Frequentes</a>
             <a href="#">Formas de Pagamento</a>
             <a href="#">Frete e Entrega</a>
-            <a href="#">Trocas e Devoluções</a>    
+            <a href="#">Trocas e Devoluções</a>
         </div>
         <div class="info_columm">
             <h3 class="info_title">MARCAS</h3>
@@ -192,18 +222,18 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
- 
+
     <script>
         const swiper = new Swiper('.swiper', {
             spaceBetween: 10,
             slidesPerView: 1,
             autoplay: {
-            delay: 2000,
+                delay: 2000,
             },
 
             pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
+                el: '.swiper-pagination',
+                type: 'bullets',
             },
 
         });
@@ -212,15 +242,16 @@
         let iconCartSpan = document.getElementById('.icon_cont')
         let buttonCart = document.querySelector('.card_button')
 
-        
+
 
         buttonCart.addEventListener('click', (event) => {
-            
+
         })
 
-        
+
 
     </script>
-    
+
 </body>
+
 </html>

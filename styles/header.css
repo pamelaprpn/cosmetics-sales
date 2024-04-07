@@ -1,5 +1,10 @@
-
 .menu{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container_menu{
     display: flex;
     justify-content: space-between;
     padding: 1em 2em;
@@ -65,6 +70,34 @@
 .link{
     text-decoration: none;
 }
+
+nav{
+    margin: 5px 0 5px 0;
+}
+
+.container_nav{
+    display: flex;
+    justify-content: center;
+    background: var(--cor-verde);
+    gap: 20px;
+}
+
+.item_nav{
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+.item_nav a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.item_nav a:hover{
+    color: var(--cor-laranja);
+}
+
 
 .item p,
 .titulo{

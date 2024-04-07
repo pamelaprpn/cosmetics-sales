@@ -1,9 +1,13 @@
-
-.swiper-wrapper img{
-    width: 100%;
+.carrossel_container{
+    padding: 20px 0;
+    text-align: center;
 }
 
 
+.swiper-wrapper img{
+    width: 80%;
+    
+}
 
 .swiper-pagination{
     position: initial;
