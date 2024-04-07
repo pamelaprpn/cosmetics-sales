@@ -22,6 +22,29 @@
     color: var(--cor-laranja);
 }
 
+.container_plus{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.plus_item{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.plus_title{
+    color: white;
+    font-size: 12px;
+}
+
+
 .rodape{
     background: var(--cor-fundo);
     padding: 2em;

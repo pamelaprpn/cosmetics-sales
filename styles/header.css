@@ -98,6 +98,29 @@ nav{
     color: var(--cor-laranja);
 }
 
+.search{
+    float: right;
+    overflow: hidden;
+}
+
+.input_search{
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+}
+
+.button_search{
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
 
 .item p,
 .titulo{
