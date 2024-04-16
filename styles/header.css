@@ -1,7 +1,6 @@
 .menu{
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
 .container_menu{
@@ -10,6 +9,8 @@
     padding: 1em 2em;
     background-color: var(--cor-fundo);
 }
+
+
 
 .logo{
     display: flex;
@@ -73,6 +74,13 @@
 
 nav{
     margin: 5px 0 5px 0;
+    position: relative;
+}
+
+.menu_hamburguer{
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
 }
 
 .container_nav{
@@ -98,39 +106,88 @@ nav{
     color: var(--cor-laranja);
 }
 
-.search{
-    float: right;
-    overflow: hidden;
+
+
+.form_search{
+    padding: 10px 0;
+    background-color: var(--cor-fundo);
+    display: flex;
+    justify-content: center;
 }
 
 .input_search{
     padding: 6px;
-    margin-top: 8px;
-    font-size: 17px;
+    font-size: 16px;
     border: none;
+    width:50%;
 }
+
+.input_search::placeholder{
+    color: var(--cor-cinza);
+    
+}
+
+.input_search:enabled{
+    border: 1px solid var(--cor-laranja);
+    color: var(--cor-cinza);
+} 
+
+
 
 .button_search{
     float: right;
     padding: 6px 10px;
-    margin-top: 8px;
-    margin-right: 16px;
-    background: #ddd;
+    background: var(--cor-laranja);
     font-size: 17px;
     border: none;
     cursor: pointer;
 }
 
 
+
+
 .item p,
-.titulo{
+.titulo, .container_hamburguer{
     display: none;
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (max-width: 430px){
     
     .item p,
     .titulo{
+        display: none;
+    }
+
+    nav{
+        position: relative;
+    }
+
+    .button_menu:checked ~ .container_nav{
         display: block;
     }
+
+    .menu_hamburguer{
+        background-image: url("../assets/bars-solid.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline-block;
+    }
+
+   .container_nav{
+        /* display: flex;
+        flex-direction: column;
+        width: 45vw;
+        position: absolute */
+        display: none;
+   }
+
+    .container_produts{
+        display: flex;
+        flex-direction: column;
+    }
+
+   
+    
+
+
 }

@@ -54,3 +54,19 @@
     text-align: center;
     color: var(--cor-cinza);
 }
+
+@media screen and (max-width: 430px){
+   .mais_info{
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: 20px;
+   }
+
+   .container_plus{
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items: flex-start;
+        gap: 10px;
+   }
+}
