@@ -55,7 +55,7 @@
     color: var(--cor-cinza);
 }
 
-@media screen and (max-width: 430px){
+@media screen and (max-width: 480px){
    .mais_info{
         display: grid;
         grid-template-columns: 1fr 1fr; 

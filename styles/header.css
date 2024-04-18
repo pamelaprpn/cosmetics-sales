@@ -144,18 +144,30 @@ nav{
 }
 
 
-
-
 .item p,
-.titulo, .container_hamburguer{
+.titulo {
+    display: block;
+}
+
+.container_hamburguer{
     display: none;
 }
 
-@media screen and (max-width: 430px){
+
+@media screen and (max-width: 480px){
     
     .item p,
-    .titulo{
+    .titulo, .container_nav, .search{
         display: none;
+    }
+
+    .container_hamburguer{
+        display: block;
+    }
+
+    .logo img{
+        width: 20px;
+        height: 50px;
     }
 
     nav{
@@ -173,13 +185,10 @@ nav{
         display: inline-block;
     }
 
-   .container_nav{
-        /* display: flex;
-        flex-direction: column;
-        width: 45vw;
-        position: absolute */
-        display: none;
-   }
+    .mode_mobile{
+        display: flex;
+    }
+   
 
     .container_produts{
         display: flex;

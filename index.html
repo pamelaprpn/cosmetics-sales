@@ -14,14 +14,12 @@
 <body>
 
     <header class="menu">
-
         <div class="container_menu">
             <div class="logo">
                 <img src="./assets/logoBoticario.png" alt="">
                 <h1 class="titulo">Dona de Si Cosmetics</h1>
             </div>
-        
-        
+
             <ul class="container_links">
                 <li class="item">
                     <a href="#" class="link">
@@ -53,13 +51,20 @@
             </ul>
         </div>
         <nav>
-            <div class="container_hamburguer">
+            <div class="container_hamburguer mode_mobile">
                 <input class="button_menu" type="checkbox" id="menu">
                 <label for="menu">
                     <span>
                         <img class="menu_hamburguer" src="./assets/bars-solid.svg" alt="Menu Hamburguer" />
                     </span>
                 </label>
+                <div class="search mode_mobile">
+                    <form class="form_search">
+                        <input class="input_search" type="text" placeholder="O que você procura hoje?" name="search" />
+                        <button class="button_search" type="submit"><img
+                                src="./assets/magnifying-glass-solid.svg" /></button>
+                    </form>
+                </div>
             </div>
             <ul class="container_nav">
                 <li class="item_nav"><a href="#">LANÇAMENTOS</a></li>
@@ -71,14 +76,15 @@
                 <li class="item_nav"><a href="#">CABELOS</a></li>
                 <li class="item_nav"><a href="#">SKINCARE</a></li>
             </ul>
+            <div class="search">
+                <form class="form_search">
+                    <input class="input_search" type="text" placeholder="O que você procura hoje?" name="search" />
+                    <button class="button_search" type="submit"><img
+                            src="./assets/magnifying-glass-solid.svg" /></button>
+                </form>
+            </div>
+
         </nav>
-        <div class="search">
-            <form class="form_search">
-                <input class="input_search" type="text" placeholder="O que você procura hoje?" name="search"/>
-                <button class="button_search" type="submit"><img src="./assets/magnifying-glass-solid.svg"/></button> 
-            </form>
-        </div>
-       
     </header>
 
     <main>
@@ -103,53 +109,55 @@
 
                 <!-- If we need scrollbar -->
                 <div class="swiper-scrollbar"></div>
+
+
             </div>
 
     </main>
-<section class="container_section">
-    <h2 class="title_section">Últimos Lançamentos</h2>
-    <div class="container_produts">
-        <div class="card">
-            <div class="image">
-                <img class="card_image" src="./assets/casa214.png" alt="">
+    <section class="container_section">
+        <h2 class="title_section">Últimos Lançamentos</h2>
+        <div class="container_produts">
+            <div class="card">
+                <div class="image">
+                    <img class="card_image" src="./assets/casa214.png" alt="">
+                </div>
+                <div class="info">
+                    <h2 class="card_titulo">Sabonete Líquido Casa 214 Gardênia Imperial 400ml</h2>
+                    <p class="card_valor">R$ 122,00</p>
+                    <a class="card_button" href="">
+                        <img src="./assets/cart-plus-solid.svg" alt="">
+                        <p>Comprar</p>
+                    </a>
+                </div>
             </div>
-            <div class="info">
-                <h2 class="card_titulo">Sabonete Líquido Casa 214 Gardênia Imperial 400ml</h2>
-                <p class="card_valor">R$ 122,00</p>
-                <a class="card_button" href="">
-                    <img src="./assets/cart-plus-solid.svg" alt="">
-                    <p>Comprar</p>
-                </a>
+            <div class="card">
+                <div class="image">
+                    <img class="card_image" src="./assets/florata.png" alt="">
+                </div>
+                <div class="info">
+                    <h2 class="card_titulo">Floratta Flores Secretas Desodorante Colônia 75ml</h2>
+                    <p class="card_valor">R$ 130,00</p>
+                    <a class="card_button" href="">
+                        <img src="./assets/cart-plus-solid.svg" alt="">
+                        <p>Comprar</p>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img class="card_image" src="./assets/uomini.png" alt="">
+                </div>
+                <div class="info">
+                    <h2 class="card_titulo">Uomini Black Desodorante Colônia 100ml</h2>
+                    <p class="card_valor">R$ 179,00</p>
+                    <a class="card_button" href="">
+                        <img src="./assets/cart-plus-solid.svg" alt="">
+                        <p>Comprar</p>
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="card">
-            <div class="image">
-                <img class="card_image" src="./assets/florata.png" alt="">
-            </div>
-            <div class="info">
-                <h2 class="card_titulo">Floratta Flores Secretas Desodorante Colônia 75ml</h2>
-                <p class="card_valor">R$ 130,00</p>
-                <a class="card_button" href="">
-                    <img src="./assets/cart-plus-solid.svg" alt="">
-                    <p>Comprar</p>
-                </a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="image">
-                <img class="card_image" src="./assets/uomini.png" alt="">
-            </div>
-            <div class="info">
-                <h2 class="card_titulo">Uomini Black Desodorante Colônia 100ml</h2>
-                <p class="card_valor">R$ 179,00</p>
-                <a class="card_button" href="">
-                    <img src="./assets/cart-plus-solid.svg" alt="">
-                    <p>Comprar</p>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
     <section class="container_section">
         <h2 class="title_section">Mais Procurados!</h2>
@@ -194,11 +202,11 @@
                 </div>
             </div>
         </div>
-        </section>
+    </section>
 
     <section class="mais_info">
-        
-    <div class="info_columm">
+
+        <div class="info_columm">
             <h3 class="info_title">DÚVIDAS</h3>
             <a href="#">Dúvidas Frequentes</a>
             <a href="#">Formas de Pagamento</a>
@@ -247,7 +255,7 @@
                     <a href="#"><img src="./assets/apple.svg" alt=""></a>
                 </div>
             </div>
-            
+
         </div>
     </section>
 
@@ -258,35 +266,9 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script>
-        const swiper = new Swiper('.swiper', {
-            spaceBetween: 10,
-            slidesPerView: 1,
-            autoplay: {
-                delay: 2000,
-            },
-
-            pagination: {
-                el: '.swiper-pagination',
-                type: 'bullets',
-            },
-
-        });
-    </script>
-    <script>
-        let iconCartSpan = document.getElementById('.icon_cont')
-        let buttonCart = document.querySelector('.card_button')
+    <script src="./index.js"></script>
 
 
-
-        buttonCart.addEventListener('click', (event) => {
-
-        })
-
-
-
-    </script>
 
 </body>
 
