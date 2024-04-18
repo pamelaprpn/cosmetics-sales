@@ -2,9 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-
-    
+    align-items: center;    
 }
 
 .container_produts{
@@ -24,12 +22,14 @@
 
 .card{ 
     border-radius: 10px; 
-    width: 220px;        
+    width: 220px;  
+    border: 2px solid var(--cor-fundo);  
+    box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%); 
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;    
 }
 
-.card:hover{
-    transform: translateY(-7px)
-}
 
 .image{
     width: 100%;
@@ -39,18 +39,16 @@
 }
 
 .card_image{
-    width: 220px;
-    height: 200px;
-    border-radius: 15px 15px 0 0;
-    
+    width: 210px;
+    height: auto;
+    border-radius: 15px 15px 0 0;  
 }
 
 .info{
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 15px;
-    background: var(--cor-fundo);
+        
 }
 
 .card_titulo{
@@ -62,7 +60,7 @@
 }
 
 .card_valor{
-    color: var(--cor-vermelho);
+    color: var(--cor-cinza-escuro);
     font-weight: 700;
     font-size: 24px;
     text-align: center;
