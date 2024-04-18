@@ -27,15 +27,44 @@
     box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%); 
     display: flex;
     flex-direction: column; 
-    justify-content: space-between;    
+    justify-content: space-between; 
+    position: relative;   
+}
+
+.interation_card{
+    display: grid;
+    
+}
+
+.sale{
+    color: white;
+    background: var(--cor-verde);
+    border-radius: 5px;
+    position: absolute;
+    padding: 0 .3rem;
+    margin: 10px;
+    top: 0;
+    right: 0;
+    
+}   
+
+
+
+
+.heart{
+    width: 20px;
+    margin: 10px;
+    position: absolute;
+    top: 0;
+    left: 0; 
+     
+    
 }
 
 
 .image{
     width: 100%;
-    position: relative;
-    bottom: -20px;
-     
+    bottom: -20px;   
 }
 
 .card_image{
