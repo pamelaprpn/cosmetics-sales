@@ -1,8 +1,11 @@
+.section_mais_info{
+    background-color: var(--cor-verde);
+}
+
 .mais_info{
     display: flex;
     justify-content: space-around;
     align-items:flex-start;
-    background-color: var(--cor-verde);
     padding: 2em;
 }
 
@@ -19,15 +22,15 @@
 }
 
 .info_title{
-    color: var(--cor-laranja);
+    color: var(--cor-cinza-escuro);
 }
 
 .container_plus{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-
+    justify-content: center;
+    gap: 5rem;
+    padding: 1rem;
+    
 }
 
 .plus_item{
