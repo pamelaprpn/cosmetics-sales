@@ -48,16 +48,12 @@
     
 }   
 
-
-
-
 .heart{
     width: 20px;
     margin: 10px;
     position: absolute;
     top: 0;
-    left: 0; 
-     
+    left: 0;    
     
 }
 
@@ -88,6 +84,13 @@
     padding: 2em 1em;
 }
 
+.card_valor_real{
+    color: var(--cor-cinza);
+    text-decoration:line-through;
+    margin-right: 2.5rem;
+    
+}
+
 .card_valor{
     color: var(--cor-cinza-escuro);
     font-weight: 700;
@@ -95,6 +98,7 @@
     text-align: center;
     text-decoration: underline;
 }
+
 
 .card_button{
     display: flex;
