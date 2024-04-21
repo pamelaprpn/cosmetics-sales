@@ -24,6 +24,7 @@ function calculatorDiscount() {
         const elementvalorCurrent = document.querySelector('.card_valor span');
         const elementValorDiscount = document.querySelector('.sale')
 
+
         const valorOld = parseFloat(elementvalorOld.textContent.replace(',', '.'));
         const valorCurrent = parseFloat(elementvalorCurrent.textContent.replace(',', '.'));
 

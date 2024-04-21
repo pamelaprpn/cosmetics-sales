@@ -5,8 +5,7 @@
 
 
 .swiper-wrapper img{
-    width: 80%;
-    
+    width: 80%;    
 }
 
 .swiper-pagination{
@@ -16,4 +15,10 @@
 
 .swiper-scrollbar{
     display: none;
+}
+
+@media screen and (max-width: 480px){
+    .swiper-wrapper img{
+        width: 100%;    
+    }
 }

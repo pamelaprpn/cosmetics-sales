@@ -10,7 +10,6 @@
     background-color: var(--cor-fundo);
 }
 
-
 .logo{
     display: flex;
     justify-content: center;
@@ -72,8 +71,7 @@
 }
 
 nav{
-    margin: 5px 0 5px 0;
-   
+    margin: 5px 0 5px 0;   
 }
 
 .menu_hamburguer{
@@ -87,6 +85,7 @@ nav{
     justify-content: center;
     background: var(--cor-verde);
     gap: 20px;
+    z-index: 9999;
 }
 
 .item_nav{
@@ -105,8 +104,6 @@ nav{
     color: var(--cor-laranja);
 }
 
-
-
 .form_search{
     padding: 10px 0;
     background-color: var(--cor-fundo);
@@ -123,7 +120,7 @@ nav{
 
 .input_search::placeholder{
     color: var(--cor-cinza);
-    
+    padding-left: 20px;   
 }
 
 .input_search:enabled{
@@ -148,7 +145,8 @@ nav{
     display: block;
 }
 
-.container_hamburguer{
+.button_menu,
+.menu_hamburguer{
     display: none;
 }
 
@@ -158,7 +156,6 @@ nav{
     .item p,
     .titulo, 
     .container_nav, 
-    .search,
     .button_menu{
         display: none;
     }
@@ -176,8 +173,34 @@ nav{
         height: 40px;
     }
 
-    .container_hamburguer{
+    nav{
         position: relative;
+        display: flex;
+        align-items: center;
+        gap: 2rem
+    }
+
+    .search{
+        width: 70%;
+    }
+
+    .form_search{
+        background-color: white;
+        padding: 0;
+    }
+
+    .input_search{    
+        font-size: 12px;
+        width:100%;
+        height: 30px;   
+    }
+
+    .button_search{
+        height: 30px; 
+    }
+
+    .button_search img{
+        width: 20px;
     }
 
     .container_nav{
