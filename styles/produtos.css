@@ -76,7 +76,11 @@
     width: 12.5rem;
     color: var(--cor-cinza);
     text-align: center;
-    padding: 2em 1em;
+    padding: 1em;
+}
+
+.avaliacao{
+    padding-bottom: 10px;
 }
 
 .card_valor_real{
@@ -136,6 +140,11 @@
 
     .info{
         height: auto;
+    }
+
+    .avaliacao{
+        width: 60px;
+        padding-bottom: 5px;
     }
 
     .heart{
