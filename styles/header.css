@@ -19,7 +19,7 @@
 
 .logo img{
     width: 70px;
-    height: 70px;
+    height: 70px;   
 }
 
 .titulo{
@@ -58,8 +58,7 @@
     border-radius: 50%;
     position: absolute;
     top: 50%;
-    right: -20px;
-    
+    right: -20px;    
 }
 
 .container_links li{
@@ -128,8 +127,6 @@ nav{
     color: var(--cor-cinza);
 } 
 
-
-
 .button_search{
     float: right;
     padding: 6px 10px;
@@ -138,7 +135,6 @@ nav{
     border: none;
     cursor: pointer;
 }
-
 
 .item p,
 .titulo {
@@ -151,7 +147,7 @@ nav{
 }
 
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 480px) and (min-width: 768px){
     
     .item p,
     .titulo, 
@@ -169,8 +165,8 @@ nav{
     }
 
     .logo img{
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;    
     }
 
     nav{
@@ -215,7 +211,6 @@ nav{
         margin-left: 20px;
     }
 
-    
     .menu_hamburguer{
         background-image: url("../assets/bars-solid.svg");
         background-repeat: no-repeat;
@@ -228,8 +223,18 @@ nav{
         flex-direction: column;
     }
 
-   
-    
-
-
 }
+
+@media screen and (min-width: 768px){
+
+    .item p,  
+    .button_menu{
+        display: none;
+    }
+
+    .titulo{
+        font-size: 24px;
+    }
+    
+}
+
