@@ -110,6 +110,8 @@
     align-items: center;
     background-color: var(--cor-verde);
     border-radius: 15px;
+    border: none;
+    cursor: pointer;
     padding: .5em 1em;
     text-decoration: none;
     gap: 10px;

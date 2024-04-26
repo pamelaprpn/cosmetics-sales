@@ -64,23 +64,23 @@ function calculatorDiscount() {
 calculatorDiscount();
 
 
-function addCart (){
-    
-    const elementIconCart = document.getElementsByClassName('.icon_cont');
-    const elementButtonAddCart = document.querySelector('.card_button');
 
-    let counter = 0;
+function addCart() {
+    elementAddCart = document.querySelector(".icon_count")
 
-    elementButtonAddCart.addEventListener('click', () => {
-        counter++;
-        //elementIconCart.textContent = counter;
-        console.log(`Total ${counter}`);
-        
+    let count = 0;
+
+    document.querySelectorAll(".card_button").forEach(button => {
+        button.addEventListener('click', () => {
+            count = count + 1;
+            elementAddCart.textContent = count;
+
+        });
     });
-    
-    
-    
 }
 
 addCart();
+
+
+
 
