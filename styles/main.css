@@ -3,22 +3,22 @@
     text-align: center;
 }
 
-
-.swiper-wrapper img{
+#wrapper_banner img{
     width: 80%;    
 }
 
-.swiper-pagination{
-    position: initial;
+#pagination_banner{
     margin: .5em 0;
 }
 
-.swiper-scrollbar{
+#scrollbar_banner{
     display: none;
 }
 
-@media screen and (max-width: 480px) and (min-width: 1024px){
-    .swiper-wrapper img{
-        width: 100%;    
+@media screen and (max-width: 480px) {
+    
+    #wrapper_banner img{
+        width: 100%;
     }
+    
 }

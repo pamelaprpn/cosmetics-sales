@@ -1,14 +1,39 @@
 function callSwiper(){
-    const swiper = new Swiper('.swiper', {
+    const swiperBanner = new Swiper('#banner_swiper', {
         spaceBetween: 10,
         slidesPerView: 1,
         autoplay: {
             delay: 5000,
         },
-    
         pagination: {
             el: '.swiper-pagination',
             type: 'bullets',
+        },
+    
+    });
+
+    const swiperCard = new Swiper('#card_swiper', {
+        loop: true,
+        grabCursor: true,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+        breakpoints: {
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 10,
+              
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 10,
+               
+            },
         },
     
     });
