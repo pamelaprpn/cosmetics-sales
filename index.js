@@ -42,23 +42,31 @@ function callSwiper(){
 callSwiper();
 
 function calculatorDiscount() {
-    let elementCard = document.querySelector(".card");
-
-    document.addEventListener("DOMContentLoaded", function () {
-        const elementvalorOld = document.querySelector(".card_valor_real span");
-        const elementvalorCurrent = document.querySelector('.card_valor span');
-        const elementValorDiscount = document.querySelector('.sale')
-
-
-        const valorOld = parseFloat(elementvalorOld.textContent.replace(',', '.'));
-        const valorCurrent = parseFloat(elementvalorCurrent.textContent.replace(',', '.'));
-
-        let discount = ((valorOld - valorCurrent) / valorOld) * 100;
-
-        console.log(`${discount.toFixed(0)}%`);
-        elementValorDiscount.textContent = `${discount.toFixed(0)}%`
+    
+    let valor_old = [];
+    let valor_current = [];
+    let discount = 0;
+    
+    document.querySelectorAll(".card_valor_real span").forEach(valueOld => {
+        total = parseFloat(valueOld.textContent.replace(',', '.'));
+        valor_old.push(total);
+        
+    });
+    
+    document.querySelectorAll(".card_valor span").forEach(valueCurrent => {
+        total = parseFloat(valueCurrent.textContent.replace(',', '.'));
+        valor_current.push(total);
+        
+    });
+    
+    document.querySelectorAll(".sale span").forEach((valueSale, index) => {
+                
+            discount = (((valor_old[index] - valor_current[index]) / valor_old[index]) * 100).toFixed(0);
+            console.log(discount);
+            valueSale.textContent = discount;
 
     });
+
 }
 
 calculatorDiscount();
