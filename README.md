@@ -5,5 +5,7 @@ Conceitos e Tecnologias ultizados: </br> </br>
 
 1 - HTML5 </br>
 2 - CSS3 </br>
-3 - Variaveis CSS </br>
-4 - Media queries 
+3 - Variáveis CSS </br>
+4 - Media queries </br>
+5 - Manipulação de DOM </br>
+6 - Biblioteca Swiper.
