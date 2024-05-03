@@ -47,20 +47,21 @@ function calculatorDiscount() {
     let valor_current = [];
     let discount = 0;
     
+    
     document.querySelectorAll(".card_valor_real span").forEach(valueOld => {
         total = parseFloat(valueOld.textContent.replace(',', '.'));
         valor_old.push(total);
         
     });
     
-    document.querySelectorAll(".card_valor span").forEach(valueCurrent => {
+    document.querySelectorAll("#card_valor_discount span").forEach(valueCurrent => {
         total = parseFloat(valueCurrent.textContent.replace(',', '.'));
         valor_current.push(total);
         
     });
     
     document.querySelectorAll(".sale span").forEach((valueSale, index) => {
-                
+            discount = 0;    
             discount = (((valor_old[index] - valor_current[index]) / valor_old[index]) * 100).toFixed(0);
             console.log(discount);
             valueSale.textContent = discount;
