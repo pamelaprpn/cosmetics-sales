@@ -93,7 +93,7 @@ addCart();
 
 function addRouter(){
     document.getElementById('link_user').onclick = function(){
-        window.location.href = "../pages/login.html";
+        window.location.href = "#login.html";
      };
 }
 
