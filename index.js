@@ -75,7 +75,8 @@ calculatorDiscount();
 
 
 function addCart() {
-    elementAddCart = document.querySelector(".icon_count")
+    let elementAddCart = document.querySelector(".icon_count");
+    
 
     let count = 0;
 
@@ -86,16 +87,18 @@ function addCart() {
 
         });
     });
+
+
 }
 
 addCart();
 
 
-function addRouter(){
+function addRouters(){
     document.getElementById('link_user').onclick = function(){
-        window.location.href = "#login.html";
+        window.location.href = "./login.html";
      };
 }
 
-addRouter();
+addRouters();
 

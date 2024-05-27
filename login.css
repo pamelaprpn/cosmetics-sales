@@ -10,13 +10,16 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    
+      
 }
+
+
+
 
 .login{
     border: 1px solid var(--cor-cinza);
-    width: 50%;    
+    border-radius: 10px;
+    width: 30%;    
 }
 
 form{
@@ -27,6 +30,13 @@ form{
 }
 
 input{
-    width: 80%;
-    
+    width: 60%;
+    border-radius: 10px;
+    height: 2rem;    
+}
+
+.btn_login{
+    width: 60%;
+    border-radius: 10px;
+    height: 2rem;
 }
