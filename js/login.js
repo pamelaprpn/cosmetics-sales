@@ -26,12 +26,10 @@ inputEmailModalForgetPassword.addEventListener('blur', function () {
 
 //Abrir modal pelo elemento Esqueci minha senha
 btnOpenModalForgetPassword.addEventListener('click', function(event){
-    event.preventDefault();
-
-    this.onclick = function() {     
+    event.preventDefault();   
         modalForgetPassword.style.display = 'block'; 
         limparModalForguetPassword;            
-    }    
+      
    
 });
 
@@ -86,11 +84,6 @@ btnEnviarModalForgetPassword.addEventListener('click', function(event){
 
     limparModalForguetPassword();
 })
-
-
-
-
-
 
 //função que valida o input e-mail login
 function validateEmail() {

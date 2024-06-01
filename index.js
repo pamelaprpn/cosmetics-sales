@@ -1,3 +1,26 @@
+callSwiper();
+calculatorDiscount();
+addCart();
+
+
+
+document.querySelectorAll('#link_user').forEach(value => {
+    value.addEventListener('click', function(event){
+        event.preventDefault();
+        window.location.href = "./login.html";  
+    })
+});
+
+
+document.querySelectorAll('.heart').forEach(value => {
+    value.addEventListener('click', function(event){
+        event.preventDefault();
+        value.setAttribute('src', './assets/heart-solid.svg');
+    })
+});
+
+
+
 function callSwiper(){
     const swiperBanner = new Swiper('#banner_swiper', {
         spaceBetween: 10,
@@ -9,6 +32,7 @@ function callSwiper(){
             el: '.swiper-pagination',
             type: 'bullets',
         },
+      
     
     });
 
@@ -34,12 +58,18 @@ function callSwiper(){
                 spaceBetween: 30,
                
             },
+            1300: {
+                slidesPerView: 4,
+                spaceBetween: 30
+            }
         },
-    
+       
     });
+    
+
+   
 }
 
-callSwiper();
 
 function calculatorDiscount() {
     
@@ -70,9 +100,6 @@ function calculatorDiscount() {
 
 }
 
-calculatorDiscount();
-
-
 
 function addCart() {
     let elementAddCart = document.querySelector(".icon_count");
@@ -91,14 +118,10 @@ function addCart() {
 
 }
 
-addCart();
 
 
-function addRouters(){
-    document.getElementById('link_user').onclick = function(){
-        window.location.href = "./login.html";
-     };
-}
+    
 
-addRouters();
+
+
 
