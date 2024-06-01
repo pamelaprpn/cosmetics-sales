@@ -26,7 +26,7 @@
                 </div>
 
                 <div class="select">
-                    <input type="password" id="password" placeholder="Informe sua Senha: *" />
+                    <input type="password" id="password" maxlength="8" placeholder="Informe sua Senha: *" />
                     <div id="passwordError" class="error"></div>
                 </div>
             
@@ -51,8 +51,8 @@
             <h2>Esqueceu a Senha?</h2>
             <h3>Informe seu e-mail cadastrado que enviaremos instruções de redefinição de senha.</h3>
             <form class="formForgetPassword">
-                <input type="email" id="email" placeholder="Informe seu E-mail: *" />
-                <div id="emailError" class="error"></div>
+                <input type="email" id="email" class="inputEmailModal" placeholder="Informe seu E-mail: *" />
+                <div id="emailErrorModal" class="error"></div>
                 <button id="buttonForm" class="forgetpassword_button">Enviar</button>
             </form>
         </div>
