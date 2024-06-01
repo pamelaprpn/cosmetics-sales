@@ -17,19 +17,33 @@
         
         <div class="login">
             <form class="form">
-                <h2>Olá</h2>
+                <h2>Olá,</h2>
                 <h3>Para continuar, digite seu e-mail e senha</h3>
             
-                <input type="email" id="email" placeholder="E-mail" required/>
-                <input type="password" id="password" placeholder="Senha" required/>
+                <div class="select">
+                    <input type="email" id="email" placeholder="Informe seu E-mail: *" />
+                    <div id="emailError" class="error"></div>
+                </div>
+
+                <div class="select">
+                    <input type="password" id="password" placeholder="Informe sua Senha: *" />
+                    <div id="passwordError" class="error"></div>
+                </div>
             
                 <button class="btn_login">Login</button>
             </form>
             <div class="info">
-                <a>Cadastrar conta</a>
-                <a>Esqueci minha senha</a>
+                <a href="#">Cadastrar conta</a>
+                <a href="#">Esqueci minha senha</a>
             </div>
+            <p class="infoCaptcha">Protegido por reCAPTCHA - Privacidade | Condições</p>
         </div>
+
+        <div class="infoPolitica">
+            <a href="#">Política de privacidade</a>
+            <a href="">Relacionamento com o cliente</a>
+        </div>
+        
     </div>
 
 
