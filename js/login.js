@@ -6,9 +6,16 @@ const inputEmailModalForgetPassword = document.querySelector('.inputEmailModal')
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const btnLogin = document.querySelector('.btn_login');
+const logo = document.getElementById('logoHome');
 
 email.addEventListener('input', validateEmail());
 password.addEventListener('input', validadeSenha());
+
+logo.addEventListener('click', function(event){
+    event.preventDefault();
+    window.location.href = "index.html";
+})
+
 
 //Validar campo de e-mail dentro da modal Esqueci minha senha
 inputEmailModalForgetPassword.addEventListener('blur', function () {
