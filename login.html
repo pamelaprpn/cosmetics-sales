@@ -30,21 +30,33 @@
                     <div id="passwordError" class="error"></div>
                 </div>
             
-                <button class="btn_login">Login</button>
+                <button id="buttonForm" class="btn_login">Login</button>
             </form>
             <div class="info">
                 <a href="#">Cadastrar conta</a>
-                <a href="#">Esqueci minha senha</a>
+                <a href="#" id="openModal">Esqueci minha senha</a>
             </div>
             <p class="infoCaptcha">Protegido por reCAPTCHA - Privacidade | Condições</p>
         </div>
 
         <div class="infoPolitica">
             <a href="#">Política de privacidade</a>
-            <a href="">Relacionamento com o cliente</a>
-        </div>
-        
+            <a href="#">Relacionamento com o cliente</a>
+        </div>    
     </div>
+
+    <section id="forgotPasswordModal" class="modal">
+        <div class="modal_content">
+            <span class="close">&times;</span>
+            <h2>Esqueceu a Senha?</h2>
+            <h3>Informe seu e-mail cadastrado que enviaremos instruções de redefinição de senha.</h3>
+            <form class="formForgetPassword">
+                <input type="email" id="email" placeholder="Informe seu E-mail: *" />
+                <div id="emailError" class="error"></div>
+                <button id="buttonForm" class="forgetpassword_button">Enviar</button>
+            </form>
+        </div>
+    </section>
 
 
     <script src="../js/login.js"></script>

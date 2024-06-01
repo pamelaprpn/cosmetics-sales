@@ -1,3 +1,4 @@
+/* Style da página login */
 
 body{
     background: var(--cor-fundo);
@@ -56,7 +57,8 @@ body{
     width: 100%;
 }
 
-.select input{
+#email,
+#password{
     width: 60%;
     border-radius: 5px;
     border: none;
@@ -64,12 +66,13 @@ body{
     text-align: center;   
 }
 
-.select input::placeholder{
+#email::placeholder,
+#password::placeholder{
     color: var(--cor-cinza);
     text-align: center; 
 }
 
-.btn_login{
+#buttonForm{
     width: 60%;
     border-radius: 5px;
     height: 2rem;
@@ -89,8 +92,7 @@ body{
 .info a{
     font-size: 14px;
     color: var(--cor-cinza);
-    text-decoration: underline;
-    
+    text-decoration: underline;   
 }
 
 .infoCaptcha{
@@ -113,7 +115,68 @@ body{
     font-size: 14px;
 }
 
+
+/* Style modal esqueci minha senha */
+.modal{
+    display: 'none';
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal_content{
+    background: var(--cor-fundo);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid var(--cor-cinza);
+    border-radius: 10px;
+    width: 20%; 
+}
+
+.close {
+    color: var(--cor-verde);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+   
+}
+
+.close:hover,
+.close:focus {
+  color: var(--cor-laranja);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal_content h2{
+    color: var(--cor-cinza);
+    font-size: 16px;
+}
+
+.modal_content h3{
+    padding-top: .5rem;
+    color: var(--cor-cinza);
+    font-size: 10px;
+}
+
+.formForgetPassword{
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+
+
 @media screen and (max-width: 480px){
+    
+    /* Style da página login */
     .logo{
         display: flex;
         flex-direction: column;
@@ -139,11 +202,13 @@ body{
         font-size: 16px;
     }
 
-    .select input{
+    #email,
+    #password{
         width: 90%;  
     }
 
-    .select input::placeholder{
+    #email::placeholder,
+    #password::placeholder{
         font-size: 12px;
     }
 
@@ -173,13 +238,30 @@ body{
         font-size: 10px;
     }
 
-    .btn_login{
+    #buttonForm{
         width: 90%;
         
     }
+
+    /* Style modal esqueci minha senha */
+    .modal_content{      
+        width: 70%; 
+    }
+
+    .modal_content h2{
+        font-size: 14px;
+    }
+    
+    .modal_content h3{
+        font-size: 8px;
+    }
+
+    
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
+
+    /* Style da página login */
     .login{
        
         width: 60%;    
@@ -187,11 +269,15 @@ body{
     }
 
     .infoCaptcha{   
-        font-size: 10px; 
-         
+        font-size: 10px;       
     }
 
     .infoPolitica{
         width: 60%;
+    }
+
+    /* Style modal esqueci minha senha */
+    .modal_content{      
+        width: 50%; 
     }
 }
