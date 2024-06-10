@@ -21,7 +21,7 @@
 
             <ul class="container_links">
                 <li class="item">
-                    <a href="#" class="link">
+                    <a href="#" class="link" id="link_cep">
                         <img src="./assets/location-dot-solid.svg" alt="Localização">
                         <p>Informe sua Localização</p>
                     </a>
@@ -93,6 +93,19 @@
                 <div class="swiper-scrollbar" id="scrollbar_banner"></div>
             </div>
     </main>
+
+    <section id="modalLocation" class="modalCep">
+        <div class="modal_contentCep">
+            <span class="close">&times;</span>
+            <h2>Insira seu CEP</h2>
+            <form class="formCep">
+                <input  id="cep" class="inputCep" placeholder="Informe seu CEP: *" />
+                <div id="cepErrorModal" class="error"></div>
+                <button id="buttonCep">OK</button>
+            </form>
+        </div>
+
+    </section>
 
     <section class="container_section">
         <h2 class="title_section">Últimos Lançamentos</h2>

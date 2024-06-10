@@ -1,8 +1,16 @@
+const openModalCEP = document.getElementById('link_cep');
+const modalCEP = document.getElementById('modalLocation');
+
+
+openModalCEP.addEventListener('click', function(event){
+    event.preventDefault();
+    modalCEP.style.display = 'block';
+
+});
+
 callSwiper();
 calculatorDiscount();
 addCart();
-
-
 
 document.querySelectorAll('#link_user').forEach(value => {
     value.addEventListener('click', function(event){
