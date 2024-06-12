@@ -57,13 +57,13 @@
                 </span>
             </label>
             <ul class="container_nav">
-                <li class="item_nav"><a href="#">LANÇAMENTOS</a></li>
-                <li class="item_nav"><a href="#">PROMOÇÕES</a></li>
-                <li class="item_nav"><a href="#">PERFUMARIA</a></li>
-                <li class="item_nav"><a href="#">CORPO E BANHO</a></li>
-                <li class="item_nav"><a href="#">MAQUIAGEM</a></li>
-                <li class="item_nav"><a href="#">CABELOS</a></li>
-                <li class="item_nav"><a href="#">SKINCARE</a></li>
+                <li class="item_nav"><a class="item_categoria" name="Lançamentos" href="#">LANÇAMENTOS</a></li>
+                <li class="item_nav"><a class="item_categoria" name="Promoções" href="#">PROMOÇÕES</a></li>
+                <li class="item_nav"><a class="item_categoria" name="Perfumaria" href="#">PERFUMARIA</a></li>
+                <li class="item_nav"><a class="item_categoria" name="Corpo e Banho" href="#">CORPO E BANHO</a></li>
+                <li class="item_nav"><a class="item_categoria" name="Maquiagem" href="#">MAQUIAGEM</a></li>
+                <li class="item_nav"><a class="item_categoria" name="Cabelos" href="#">CABELOS</a></li>
+                <li class="item_nav"><a class="item_categoria" name="Skincare" href="#">SKINCARE</a></li>
             </ul>
             <div class="search">
                 <form class="form_search">
@@ -97,11 +97,11 @@
     
 
     <section class="container_section">
-        <h2 class="title_section">Últimos Lançamentos</h2>
+        <h2 class="title_section">Todos os Produtos</h2>
         <div class="container_produts">
             <div class="swiper" id="card_swiper">
                 <div class="swiper-pagination" id="pagination_card"></div>
-                <div class="swiper-wrapper" id="wrapper_card">
+                <div class="swiper-wrapper" id="wrapper_card" data-todos>
                    <!-- Aqui vai ficar o retorno dos produtos da api produtos.json -->
                 </div>
             </div>
@@ -110,11 +110,11 @@
     </section>
 
     <section class="container_section">
-        <h2 class="title_section">Mais Procurados!</h2>
+        <h2 class="title_section">Lançamentos</h2>
         <div class="container_produts">
             <div class="swiper" id="card_swiper">
                 <div class="swiper-pagination" id="pagination_card"></div>
-                <div class="swiper-wrapper" id="wrapper_card">
+                <div class="swiper-wrapper" id="wrapper_card" data-promocoes>
                     <!-- Aqui vai ficar o retorno dos produtos da api produtos.json -->
                 </div>
             </div>

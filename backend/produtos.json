@@ -7,7 +7,8 @@
             "priceActual": 122.00,
             "image": "./assets/produtos/casa214.svg",
             "avaliacao": "./assets/Estrelinhas3.svg",
-            "categoria": "Corpo e Banho"
+            "categoria": "Corpo e Banho",
+            "lancamento": false
         },
         {
             "id": 2,
@@ -16,7 +17,8 @@
             "priceActual": 122.00,
             "image": "./assets/produtos/florata.svg",
             "avaliacao": "./assets/Estrelinhas5.svg",
-            "categoria": "Perfumaria"
+            "categoria": "Perfumaria",
+            "lancamento": true
         },
         {
             "id": 3,
@@ -25,7 +27,8 @@
             "priceActual": 159.00,
             "image": "./assets/produtos/uomini.svg",
             "avaliacao": "./assets/Estrelinhas4.svg",
-            "categoria": "Perfumaria"
+            "categoria": "Perfumaria",
+            "lancamento": false
         },
         {
             "id": 4,
@@ -34,7 +37,8 @@
             "priceActual": 169.00,
             "image": "./assets/produtos/liz_flora.svg",
             "avaliacao": "./assets/Estrelinhas5.svg",
-            "categoria": "Perfumaria"
+            "categoria": "Perfumaria",
+            "lancamento": false
         },
         {
             "id": 5,
@@ -43,7 +47,8 @@
             "priceActual": 173.00,
             "image": "./assets/produtos/celebre.svg",
             "avaliacao": "./assets/Estrelinhas5.svg",
-            "categoria": "Perfumaria"
+            "categoria": "Perfumaria",
+            "lancamento": true
         },
         {
             "id": 6,
@@ -51,7 +56,8 @@
             "priceOld": "",
             "priceActual": 110.00,
             "image": "./assets/produtos/nativaSpa.svg",
-            "avaliacao": "./assets/Estrelinhas5.svg"
+            "avaliacao": "./assets/Estrelinhas5.svg",
+            "lancamento": false
         },
         {
             "id": 7,
@@ -60,7 +66,8 @@
             "priceActual": 124.00,
             "image": "./assets/produtos/portinari.svg",
             "avaliacao": "./assets/Estrelinhas3.svg",
-            "categoria": "Perfumaria"
+            "categoria": "Perfumaria",
+            "lancamento": false
         },
         {
             "id": 8,
@@ -69,7 +76,8 @@
             "priceActual": 136.00,
             "image": "./assets/produtos/malbec.svg",
             "avaliacao": "./assets/Estrelinhas4.svg",
-            "categoria": "Perfumaria"
+            "categoria": "Perfumaria",
+            "lancamento": true
         },
         {
             "id": 9,
@@ -78,7 +86,8 @@
             "priceActual": 186.00,
             "image": "./assets/produtos/lily.svg",
             "avaliacao": "./assets/Estrelinhas3.svg",
-            "categoria": "Perfumaria"
+            "categoria": "Perfumaria",
+            "lancamento": false
         },
         {
             "id": 10,
@@ -87,7 +96,8 @@
             "priceActual": 186.00,
             "image": "./assets/produtos/glamour.svg",
             "avaliacao": "./assets/Estrelinhas5.svg",
-            "categoria": "Perfumaria"
+            "categoria": "Perfumaria",
+            "lancamento": true
         },
         {
             "id": 11,
@@ -96,7 +106,8 @@
             "priceActual": 22.50,
             "image": "./assets/produtos/gel_antisseptico.svg",
             "avaliacao": "./assets/Estrelinhas4.svg",
-            "categoria": "Corpo e Banho"
+            "categoria": "Corpo e Banho",
+            "lancamento": true
         },
         {
             "id": 12,
@@ -105,7 +116,8 @@
             "priceActual": 72.90,
             "image": "./assets/produtos/Protetor_Solar_Facial.svg",
             "avaliacao": "./assets/Estrelinhas3.svg",
-            "categoria": "Corpo e Banho"
+            "categoria": "Corpo e Banho",
+            "lancamento": false
         },
         {
             "id": 13,
@@ -114,7 +126,8 @@
             "priceActual": 82.90,
             "image": "./assets/produtos/loção_Noturna.svg",
             "avaliacao": "./assets/Estrelinhas5.svg",
-            "categoria": "Corpo e Banho"
+            "categoria": "Corpo e Banho",
+            "lancamento": true
         },
         {
             "id": 14,
@@ -123,7 +136,8 @@
             "priceActual": 47.90,
             "image": "./assets/produtos/mascara_cilios.svg",
             "avaliacao": "./assets/Estrelinhas5.svg",
-            "categoria": "Make"
+            "categoria": "Maquiagem",
+            "lancamento": false
         },
         {
             "id": 15,
@@ -132,7 +146,8 @@
             "priceActual": 37.90,
             "image": "./assets/produtos/delineador.svg",
             "avaliacao": "./assets/Estrelinhas4.svg",
-            "categoria": "Make"
+            "categoria": "Maquiagem",
+            "lancamento": false
         },
         {
             "id": 16,
@@ -141,16 +156,18 @@
             "priceActual": 79.90,
             "image": "./assets/produtos/paleta_sombra.svg",
             "avaliacao": "./assets/Estrelinhas5.svg",
-            "categoria": "Make"
+            "categoria": "Maquiagem",
+            "lancamento": true
         },
         {
             "id": 17,
-            "name": "Base Líquida Incolor Protetora Make B. Hyaluronic FPS 70, 30 ml",
+            "name": "Base Líquida Incolor Protetora Maquiagem B. Hyaluronic FPS 70, 30 ml",
             "priceOld": 117,
             "priceActual": 91.90,
             "image": "./assets/produtos/base_liquida.svg",
             "avaliacao": "./assets/Estrelinhas5.svg",
-            "categoria": "Make"
+            "categoria": "Maquiagem",
+            "lancamento": false
         },
         {
             "id": 18,
@@ -159,7 +176,8 @@
             "priceActual": 67.90,
             "image": "./assets/produtos/mascara_nutricao.svg",
             "avaliacao": "./assets/Estrelinhas3.svg",
-            "categoria": "Cabelos"
+            "categoria": "Cabelos",
+            "lancamento": true
         },
         {
             "id": 19,
@@ -168,7 +186,8 @@
             "priceActual": 39.90,
             "image": "./assets/produtos/shampoo.svg",
             "avaliacao": "./assets/Estrelinhas4.svg",
-            "categoria": "Cabelos"
+            "categoria": "Cabelos",
+            "lancamento": false
         },
         {
             "id": 20,
@@ -177,7 +196,8 @@
             "priceActual": 59.90,
             "image": "./assets/produtos/fluido_selador.svg",
             "avaliacao": "./assets/Estrelinhas4.svg",
-            "categoria": "Cabelos"
+            "categoria": "Cabelos",
+            "lancamento": false
         },
         {
             "id": 21,
@@ -186,7 +206,8 @@
             "priceActual": 194.90,
             "image": "./assets/produtos/serum_Mandelico.svg",
             "avaliacao": "./assets/Estrelinhas5.svg",
-            "categoria": "Skincare"
+            "categoria": "Skincare",
+            "lancamento": true
         },
         {
             "id": 21,
@@ -195,7 +216,8 @@
             "priceActual": 57.50,
             "image": "./assets/produtos/gel_limpeza.svg",
             "avaliacao": "./assets/Estrelinhas3.svg",
-            "categoria": "Skincare"
+            "categoria": "Skincare",
+            "lancamento": false
         },
         {
             "id": 22,
@@ -204,7 +226,8 @@
             "priceActual": 57.50,
             "image": "./assets/produtos/esfoliante.svg",
             "avaliacao": "./assets/Estrelinhas4.svg",
-            "categoria": "Skincare"
+            "categoria": "Skincare",
+            "lancamento": true
         }
     ]
 }

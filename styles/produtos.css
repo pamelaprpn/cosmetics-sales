@@ -92,13 +92,13 @@
     padding-bottom: 10px;
 }
 
-.card_valor_real{
+.card_valor_old{
     color: var(--cor-cinza);
     text-decoration:line-through;
     margin-right: 2.5rem;   
 }
 
-.card_valor{
+.card_valor_discount{
     color: var(--cor-cinza-escuro);
     font-weight: 700;
     font-size: 1.5rem;
