@@ -1,7 +1,5 @@
-{
-    "produtos": [
+[
         {
-            "id": 1,
             "name": "Sabonete Líquido Casa 214 Gardênia Imperial 400ml",
             "priceOld": 159.00,
             "priceActual": 122.00,
@@ -11,7 +9,6 @@
             "lancamento": false
         },
         {
-            "id": 2,
             "name": "Floratta Flores Secretas Desodorante Colônia 75ml",
             "priceOld": 159.00,
             "priceActual": 122.00,
@@ -21,7 +18,6 @@
             "lancamento": true
         },
         {
-            "id": 3,
             "name": "Uomini Black Desodorante Colônia 100ml",
             "priceOld": 179.00,
             "priceActual": 159.00,
@@ -31,7 +27,6 @@
             "lancamento": false
         },
         {
-            "id": 4,
             "name": "Liz Flora Desodorante Colônia 100ml",
             "priceOld": 199.90,
             "priceActual": 169.00,
@@ -41,7 +36,6 @@
             "lancamento": false
         },
         {
-            "id": 5,
             "name": "Celebre Sua Força Desodorante Colônia Masculino",
             "priceOld": 189.00,
             "priceActual": 173.00,
@@ -51,16 +45,16 @@
             "lancamento": true
         },
         {
-            "id": 6,
             "name": "Acquagel Hidratante Desodorante Corporal Nativa SPA Ameixa 250g",
             "priceOld": "",
             "priceActual": 110.00,
             "image": "./assets/produtos/nativaSpa.svg",
             "avaliacao": "./assets/Estrelinhas5.svg",
+            "categoria": "Corpo e Banho",
             "lancamento": false
         },
         {
-            "id": 7,
+
             "name": "Boticollection Portinari Desodorante Colônia 100ml",
             "priceOld": "",
             "priceActual": 124.00,
@@ -70,7 +64,7 @@
             "lancamento": false
         },
         {
-            "id": 8,
+
             "name": "Malbec Desodorante Colônia 100ml",
             "priceOld": 159.00,
             "priceActual": 136.00,
@@ -80,7 +74,7 @@
             "lancamento": true
         },
         {
-            "id": 9,
+
             "name": "L'eau de Lily Soleil Desodorante Colônia 75ml",
             "priceOld": "",
             "priceActual": 186.00,
@@ -90,7 +84,6 @@
             "lancamento": false
         },
         {
-            "id": 10,
             "name": "Glamour Desodorante Colônia 75ml",
             "priceOld": 205.90,
             "priceActual": 186.00,
@@ -100,7 +93,6 @@
             "lancamento": true
         },
         {
-            "id": 11,
             "name": "Gel Antisséptico 70º INPM Cuide-se Bem Nuvem 30g",
             "priceOld": 30.90,
             "priceActual": 22.50,
@@ -110,7 +102,6 @@
             "lancamento": true
         },
         {
-            "id": 12,
             "name": "Protetor Solar Facial Antioleosidade FPS70 Boti.Sun Acqua Fluido 40ml",
             "priceOld": "",
             "priceActual": 72.90,
@@ -120,7 +111,6 @@
             "lancamento": false
         },
         {
-            "id": 13,
             "name": "Loção Noturna Desodorante Corporal Nativa SPA Orquídea Noire 400ml",
             "priceOld": "",
             "priceActual": 82.90,
@@ -130,7 +120,6 @@
             "lancamento": true
         },
         {
-            "id": 14,
             "name": "Máscara de Cílios Intense Superfix Bye Bye Panda 11g",
             "priceOld": 59.90,
             "priceActual": 47.90,
@@ -140,7 +129,6 @@
             "lancamento": false
         },
         {
-            "id": 15,
             "name": "Delineador Líquido Preto Intense 2,5 ml",
             "priceOld": "",
             "priceActual": 37.90,
@@ -150,7 +138,6 @@
             "lancamento": false
         },
         {
-            "id": 16,
             "name": "Palette Multifuncional #1 Rose Intense 13,2g",
             "priceOld": 99.00,
             "priceActual": 79.90,
@@ -160,7 +147,6 @@
             "lancamento": true
         },
         {
-            "id": 17,
             "name": "Base Líquida Incolor Protetora Maquiagem B. Hyaluronic FPS 70, 30 ml",
             "priceOld": 117,
             "priceActual": 91.90,
@@ -170,7 +156,6 @@
             "lancamento": false
         },
         {
-            "id": 18,
             "name": "Máscara Capilar Match Nutrição Regeneradora 250g",
             "priceOld": 79.90,
             "priceActual": 67.90,
@@ -180,7 +165,6 @@
             "lancamento": true
         },
         {
-            "id": 19,
             "name": "Shampoo Anti-Idade Desamarelador Match Juventude dos Fios Brancos Naturais 250ml",
             "priceOld": "",
             "priceActual": 39.90,
@@ -190,7 +174,6 @@
             "lancamento": false
         },
         {
-            "id": 20,
             "name": "Fluido Selador Capilar Match Proteção dos Loiros 100ml",
             "priceOld": 60,
             "priceActual": 59.90,
@@ -200,7 +183,6 @@
             "lancamento": false
         },
         {
-            "id": 21,
             "name": "Sérum de Alta Potência Ácido Mandélico + Tranexâmico 5% Botik 30ml",
             "priceOld": 201,
             "priceActual": 194.90,
@@ -210,7 +192,6 @@
             "lancamento": true
         },
         {
-            "id": 21,
             "name": "Gel de Limpeza Facial Micelar Ácido Mandélico + Salicílico Botik 150g",
             "priceOld": "",
             "priceActual": 57.50,
@@ -220,7 +201,6 @@
             "lancamento": false
         },
         {
-            "id": 22,
             "name": "Açúcar Esfoliante Óleo Desodorante Nativa SPA Ameixa 200g",
             "priceOld": 77.90,
             "priceActual": 57.50,
@@ -229,5 +209,4 @@
             "categoria": "Skincare",
             "lancamento": true
         }
-    ]
-}
+]
