@@ -1,5 +1,5 @@
 const containerProdutos = document.querySelector('[data-todos]');
-const containerPromoções = document.querySelector('[data-promocoes]');
+//const containerPromoções = document.querySelector('[data-promocoes]');
 
 
 async function buscarProdutos(){
@@ -31,35 +31,7 @@ async function buscarProdutos(){
                         </div>
                     </div>
             `;  
-            
-            if(produto.lancamento == true){
-                containerPromoções.innerHTML +=`
-                <div class="swiper-slide" id="slide_card">
-                <div class="card">
-                    <a href="#">
-                        <img class="heart" src="./assets/heart-regular.svg" alt="Favoritos" />
-                    </a>
-                    <p class="sale">-<span >0</span>%</p>
-                <div class="image">
-                    <img class="card_image" src="${produto.image}"
-                        alt="${produto.name}">
-                </div>
-                <div class="info">
-                    <h2 class="card_titulo">${produto.name}</h2>
-                        <img class="avaliacao" src="${produto.avaliacao}" alt="Avaliações de clientes" />
-                        <p class="card_valor_old">R$<span>${produto.priceOld}</span></p>
-                        <p class="card_valor_discount">R$<span>${produto.priceActual}</span></p>
-                        <p class="categoria" hidden>${produto.categoria}</p>
-                        <button class="card_button">
-                            <img src="./assets/cart-plus-solid.svg" alt="Icone carrinho no card">
-                            <p>Comprar</p>
-                        </button>
-                </div>
-            </div>
-                `
-            }  
-      
-             
+                     
         })
 
         addCart();
