@@ -35,9 +35,8 @@
 }
 
 .card{ 
-    border-radius: 10px;   
-    border: 2px solid var(--cor-fundo);  
-    box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%); 
+    border-radius: 5px;   
+    border: 2px solid var(--cor-fundo);   
     position: relative;  
     display: flex;
     flex-direction: column; 

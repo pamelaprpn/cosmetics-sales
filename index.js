@@ -1,12 +1,16 @@
+
+
 const containerProdutos = document.querySelector('[data-todos]');
-//const containerPromoções = document.querySelector('[data-promocoes]');
+const containerPromoções = document.querySelector('[data-promocoes]');
 
 
 async function buscarProdutos(){
     try{
         const api = await fetch("http://localhost:3000/produtos");
         const produtos = await api.json();
-        produtos.forEach((produto) => {    
+
+        produtos.forEach((produto) => {   
+            
             containerProdutos.innerHTML += `
                     <div class="swiper-slide" id="slide_card">
                         <div class="card">
@@ -46,50 +50,84 @@ buscarProdutos();
 
 
 
-// const botaoCategoria = document.querySelectorAll('.item_categoria')
+
+
+//const listaCategoria = document.querySelectorAll('.container_nav li');
+
+// listaCategoria.forEach(item => {
+//     item.addEventListener('click', () => {
+//         // logica pra filtrar pro categoria
+//         // if( === Lançamentos){
+//         //     containerProdutos.innerHTML += 
+//         //     `    <div class="swiper-slide" id="slide_card">
+//         //                 <div class="card">
+//         //                     <a href="#">
+//         //                         <img class="heart" src="./assets/heart-regular.svg" alt="Favoritos" />
+//         //                     </a>
+//         //                     <p class="sale">-<span >0</span>%</p>
+//         //                 <div class="image">
+//         //                     <img class="card_image" src="${produto.image}"
+//         //                         alt="${produto.name}">
+//         //                 </div>
+//         //                 <div class="info">
+//         //                     <h2 class="card_titulo">${produto.name}</h2>
+//         //                         <img class="avaliacao" src="${produto.avaliacao}" alt="Avaliações de clientes" />
+//         //                         <p class="card_valor_old">R$<span>${produto.priceOld}</span></p>
+//         //                         <p class="card_valor_discount">R$<span>${produto.priceActual}</span></p>
+//         //                         <p class="categoria" hidden>${produto.categoria}</p>
+//         //                         <button class="card_button">
+//         //                             <img src="./assets/cart-plus-solid.svg" alt="Icone carrinho no card">
+//         //                             <p>Comprar</p>
+//         //                         </button>
+//         //                 </div>
+//         //             </div>
+//         //     `;
+            
+//         // }
+//     })
+// })
+
 
 // botaoCategoria.forEach((botao) => {
-//     let nomeCategoria = botao.getAttribute('name');
-//     botao.addEventListener('click', () => {
-//         const produtos = document.querySelectorAll('#slide_card');
 
-//         if(nomeCategoria == Perfumaria && produto.categoria){
-//             containerProdutos.innerHTML += `
-//             <div class="swiper-slide" id="slide_card">
-//             <div class="card">
-//                 <a href="#">
-//                     <img class="heart" src="./assets/heart-regular.svg" alt="Favoritos" />
-//                 </a>
-//                 <p class="sale">-<span >0</span>%</p>
-//             <div class="image">
-//                 <img class="card_image" src="${produto.image}"
-//                     alt="${produto.name}">
-//             </div>
-//             <div class="info">
-//                 <h2 class="card_titulo">${produto.name}</h2>
-//                     <img class="avaliacao" src="${produto.avaliacao}" alt="Avaliações de clientes" />
-//                     <p class="card_valor_old">R$<span>${produto.priceOld}</span></p>
-//                     <p class="card_valor_discount">R$<span>${produto.priceActual}</span></p>
-//                     <p class="categoria" hidden>${produto.categoria}</p>
-//                     <button class="card_button">
-//                         <img src="./assets/cart-plus-solid.svg" alt="Icone carrinho no card">
-//                         <p>Comprar</p>
-//                     </button>
-//             </div>
-//         </div>
-//             `
+   
+//     // let nomeCategoria = botao.getAttribute('name');
+//     // botao.addEventListener('click', () => {
+//     //     const produtos = document.querySelectorAll('#slide_card');
+
+//     //     if(nomeCategoria == Perfumaria && produto.categoria){
+//     //         containerProdutos.innerHTML += `
+//     //         <div class="swiper-slide" id="slide_card">
+//     //         <div class="card">
+//     //             <a href="#">
+//     //                 <img class="heart" src="./assets/heart-regular.svg" alt="Favoritos" />
+//     //             </a>
+//     //             <p class="sale">-<span >0</span>%</p>
+//     //         <div class="image">
+//     //             <img class="card_image" src="${produto.image}"
+//     //                 alt="${produto.name}">
+//     //         </div>
+//     //         <div class="info">
+//     //             <h2 class="card_titulo">${produto.name}</h2>
+//     //                 <img class="avaliacao" src="${produto.avaliacao}" alt="Avaliações de clientes" />
+//     //                 <p class="card_valor_old">R$<span>${produto.priceOld}</span></p>
+//     //                 <p class="card_valor_discount">R$<span>${produto.priceActual}</span></p>
+//     //                 <p class="categoria" hidden>${produto.categoria}</p>
+//     //                 <button class="card_button">
+//     //                     <img src="./assets/cart-plus-solid.svg" alt="Icone carrinho no card">
+//     //                     <p>Comprar</p>
+//     //                 </button>
+//     //         </div>
+//     //     </div>
+//     //         `
             
-//         }
+//     //     }
 
-//     });
+//     // });
     
 
 // })
 
-
-// function filtarPorCategoria(filtro){
-    
-// }
 
 callSwiper();
 
@@ -161,44 +199,34 @@ function callSwiper(){
 
 function calculatorDiscount() {
     
-    let valor_old = [];
-    let valor_current = [];
     let discount = 0;
 
+    const listaValorOld = document.querySelectorAll(".card_valor_old span");
+    let valoresConvertidosOld = [];
+
+    listaValorOld.forEach(item => {
+        const textoValor = item.textContent.trim(); 
+        const valorConvertido = parseFloat(textoValor.replace(',', '.'));
+        valoresConvertidosOld.push(valorConvertido);
+    });
 
 
-    document.querySelectorAll(".card_valor_old span").forEach(valueOld => {
-        total = parseFloat(valueOld.textContent.replace(',', '.'));
-        console.log(total)
-    })
+    const listaValorActual = document.querySelectorAll(".card_valor_discount span");
+    let valoresConvertidosActual = [];
 
-    
-    
-    
-    // document.querySelectorAll(".card_valor_old span").forEach(valueOld => {
-    //     total = parseFloat(valueOld.textContent.replace(',', '.'));
-    //     valor_old.push(total);
-        
-    // });
-    
-    // document.querySelectorAll("#card_valor_discount span").forEach(valueCurrent => {
-    //     total = parseFloat(valueCurrent.textContent.replace(',', '.'));
-    //     valor_current.push(total);
-       
-        
-    // });
-    
-    // document.querySelectorAll(".sale span").forEach((valueSale, index) => {
+    listaValorActual.forEach(item => {
+        const textoValor = item.textContent.trim();
+        const valorConvertido = parseFloat(textoValor.replace(',', '.'));
+        valoresConvertidosActual.push(valorConvertido);
+    });
 
-            
-
-    //         discount = 0;    
-    //         discount = (((valor_old[index] - valor_current[index]) / valor_old[index]) * 100).toFixed(0);
-    //         console.log(discount);
-    //         valueSale.textContent = discount;
-         
-
-    // });
+ 
+    document.querySelectorAll(".sale span").forEach((valueSale, index) => {
+                discount = 0;    
+                discount = (((valoresConvertidosOld[index] - valoresConvertidosActual[index]) / valoresConvertidosOld[index]) * 100).toFixed(0);
+                console.log(discount);
+                valueSale.textContent = discount;          
+        });
 
 }
 
