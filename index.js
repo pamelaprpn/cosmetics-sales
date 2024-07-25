@@ -1,7 +1,7 @@
 
 
 const containerProdutos = document.querySelector('[data-todos]');
-const containerPromoções = document.querySelector('[data-promocoes]');
+const containerLancamentos = document.querySelector('[data-lancamentos]');
 
 
 async function buscarProdutos(){
@@ -35,11 +35,56 @@ async function buscarProdutos(){
                         </div>
                     </div>
             `;  
+
+            // Revisitar essa logica, pois não está funcioando
+            if (produto.categoria === true) {
+                containerLancamentos.innerHTML += `
+                    <div class="swiper-slide" id="slide_card">
+                        <div class="card">
+                            <a href="#">
+                                <img class="heart" src="./assets/heart-regular.svg" alt="Favoritos" />
+                            </a>
+                            <p class="sale">-<span >0</span>%</p>
+                        <div class="image">
+                            <img class="card_image" src="${produto.image}"
+                                alt="${produto.name}">
+                        </div>
+                        <div class="info">
+                            <h2 class="card_titulo">${produto.name}</h2>
+                                <img class="avaliacao" src="${produto.avaliacao}" alt="Avaliações de clientes" />
+                                <p class="card_valor_old">R$<span>${produto.priceOld}</span></p>
+                                <p class="card_valor_discount">R$<span>${produto.priceActual}</span></p>
+                                <p class="categoria" hidden>${produto.categoria}</p>
+                                <button class="card_button">
+                                    <img src="./assets/cart-plus-solid.svg" alt="Icone carrinho no card">
+                                    <p>Comprar</p>
+                                </button>
+                        </div>
+                    </div>
+            `;
+            }
+            
                      
         })
 
+        callSwiper();
         addCart();
         calculatorDiscount();
+
+        document.querySelectorAll('.heart').forEach(value => {
+            value.addEventListener('click', function(event){
+                event.preventDefault();
+                value.setAttribute('src', './assets/heart-solid.svg');
+            })
+        });
+
+        document.querySelectorAll('#link_user').forEach(value => {
+            value.addEventListener('click', function(event){
+                event.preventDefault();
+                window.location.href = "./login.html";  
+            })
+        });
+
     } catch(error){
         containerCard.innerHTML = `<p> Houve um erro ao carregar produtos: ${error} </p> `
     }
@@ -48,105 +93,6 @@ async function buscarProdutos(){
 
 buscarProdutos();
 
-
-
-
-
-//const listaCategoria = document.querySelectorAll('.container_nav li');
-
-// listaCategoria.forEach(item => {
-//     item.addEventListener('click', () => {
-//         // logica pra filtrar pro categoria
-//         // if( === Lançamentos){
-//         //     containerProdutos.innerHTML += 
-//         //     `    <div class="swiper-slide" id="slide_card">
-//         //                 <div class="card">
-//         //                     <a href="#">
-//         //                         <img class="heart" src="./assets/heart-regular.svg" alt="Favoritos" />
-//         //                     </a>
-//         //                     <p class="sale">-<span >0</span>%</p>
-//         //                 <div class="image">
-//         //                     <img class="card_image" src="${produto.image}"
-//         //                         alt="${produto.name}">
-//         //                 </div>
-//         //                 <div class="info">
-//         //                     <h2 class="card_titulo">${produto.name}</h2>
-//         //                         <img class="avaliacao" src="${produto.avaliacao}" alt="Avaliações de clientes" />
-//         //                         <p class="card_valor_old">R$<span>${produto.priceOld}</span></p>
-//         //                         <p class="card_valor_discount">R$<span>${produto.priceActual}</span></p>
-//         //                         <p class="categoria" hidden>${produto.categoria}</p>
-//         //                         <button class="card_button">
-//         //                             <img src="./assets/cart-plus-solid.svg" alt="Icone carrinho no card">
-//         //                             <p>Comprar</p>
-//         //                         </button>
-//         //                 </div>
-//         //             </div>
-//         //     `;
-            
-//         // }
-//     })
-// })
-
-
-// botaoCategoria.forEach((botao) => {
-
-   
-//     // let nomeCategoria = botao.getAttribute('name');
-//     // botao.addEventListener('click', () => {
-//     //     const produtos = document.querySelectorAll('#slide_card');
-
-//     //     if(nomeCategoria == Perfumaria && produto.categoria){
-//     //         containerProdutos.innerHTML += `
-//     //         <div class="swiper-slide" id="slide_card">
-//     //         <div class="card">
-//     //             <a href="#">
-//     //                 <img class="heart" src="./assets/heart-regular.svg" alt="Favoritos" />
-//     //             </a>
-//     //             <p class="sale">-<span >0</span>%</p>
-//     //         <div class="image">
-//     //             <img class="card_image" src="${produto.image}"
-//     //                 alt="${produto.name}">
-//     //         </div>
-//     //         <div class="info">
-//     //             <h2 class="card_titulo">${produto.name}</h2>
-//     //                 <img class="avaliacao" src="${produto.avaliacao}" alt="Avaliações de clientes" />
-//     //                 <p class="card_valor_old">R$<span>${produto.priceOld}</span></p>
-//     //                 <p class="card_valor_discount">R$<span>${produto.priceActual}</span></p>
-//     //                 <p class="categoria" hidden>${produto.categoria}</p>
-//     //                 <button class="card_button">
-//     //                     <img src="./assets/cart-plus-solid.svg" alt="Icone carrinho no card">
-//     //                     <p>Comprar</p>
-//     //                 </button>
-//     //         </div>
-//     //     </div>
-//     //         `
-            
-//     //     }
-
-//     // });
-    
-
-// })
-
-
-callSwiper();
-
-
-
-document.querySelectorAll('#link_user').forEach(value => {
-    value.addEventListener('click', function(event){
-        event.preventDefault();
-        window.location.href = "./login.html";  
-    })
-});
-
-
-document.querySelectorAll('.heart').forEach(value => {
-    value.addEventListener('click', function(event){
-        event.preventDefault();
-        value.setAttribute('src', './assets/heart-solid.svg');
-    })
-});
 
 
 
@@ -224,7 +170,6 @@ function calculatorDiscount() {
     document.querySelectorAll(".sale span").forEach((valueSale, index) => {
                 discount = 0;    
                 discount = (((valoresConvertidosOld[index] - valoresConvertidosActual[index]) / valoresConvertidosOld[index]) * 100).toFixed(0);
-                console.log(discount);
                 valueSale.textContent = discount;          
         });
 
