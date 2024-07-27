@@ -1,0 +1,1 @@
+const btnOpenCadastro = document.getElementById('openCadastro')
