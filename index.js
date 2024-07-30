@@ -113,7 +113,6 @@ function callSwiper(){
     });
 
     const swiperCard = new Swiper('#card_swiper', {
-        loop: false,
         grabCursor: true,
         pagination: {
             el: '.swiper-pagination',
