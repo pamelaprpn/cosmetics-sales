@@ -3,7 +3,8 @@ const containerProdutos = document.querySelector('[data-todos]');
 const containerLancamentos = document.querySelector('[data-lancamentos]');
 
 
-async function buscarProdutos(){
+
+async function buscarTodosProdutos(){
     try{
         const api = await fetch("http://localhost:3000/produtos");
         const produtos = await api.json();
@@ -27,6 +28,7 @@ async function buscarProdutos(){
                                     <p class="card_valor_old">R$<span>${produto.priceOld}</span></p>
                                     <p class="card_valor_discount">R$<span>${produto.priceActual}</span></p>
                                     <p class="categoria" hidden>${produto.categoria}</p>
+                                    <p class="lancamento" hidden>${produto.lancamento}</p>
                                     <button class="card_button">
                                         <img src="./assets/cart-plus-solid.svg" alt="Icone carrinho no card">
                                         <p>Comprar</p>
@@ -39,7 +41,7 @@ async function buscarProdutos(){
         });
 
         // exibir somente os lançamentos
-        const produtosFiltrados = produtos.filter(produto => produto.categoria === true);
+        const produtosFiltrados = produtos.filter(produto => produto.lancamento === true);
         console.log(produtosFiltrados)
         produtosFiltrados.forEach(produto => {
             containerLancamentos.innerHTML += `
@@ -92,7 +94,7 @@ async function buscarProdutos(){
 
 }
 
-buscarProdutos();
+buscarTodosProdutos();
 
 
 
@@ -141,6 +143,7 @@ function callSwiper(){
        
     });  
 }
+
 
 
 function calculatorDiscount() {

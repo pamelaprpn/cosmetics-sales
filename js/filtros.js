@@ -15,7 +15,8 @@ function filtrarPesquisa(){
                 produto.style.display = "none";
             }else{
                 produto.style.display = "block";
-                document.querySelector('#section_lancamento').style.display = "none";                
+                document.querySelector('#section_lancamento').style.display = "none"; 
+
             }
         }
     }else{
@@ -43,4 +44,6 @@ function filtarPorCategoria(filtro){
         }
     }
 }
+
+
 
