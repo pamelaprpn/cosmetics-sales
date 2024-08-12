@@ -84,7 +84,7 @@ async function buscarTodosProdutos(){
         document.querySelectorAll('#link_user').forEach(value => {
             value.addEventListener('click', function(event){
                 event.preventDefault();
-                window.location.href = "./login.html";  
+                window.location.href = "../page/login.html";  
             })
         });
 

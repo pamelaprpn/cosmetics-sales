@@ -137,36 +137,6 @@ function validadeSenha(){
 
 
 
-// function validarForm (){
-//     validadeEmail();
-//     validadeSenha();
-
-//     document.querySelector('.btn_login').addEventListener('click', function(event){
-//         if(email.trim() === "" && password.trim() === ""){
-//             event.preventDefault();
-//             email.style.border = '1px solid red';
-//             password.style.border = '1px solid red';
-
-//             alert('teste')
-//         }
-//     })
-// }
-
-// validarForm();
-
-// document.getElementsByClassName('.btn_login').addEventListener("click", function(event){
-
-//     if(email.trim() === "" && password.trim() === ""){
-//         email.style.border = '1px solid red';
-//         document.getElementById('emailError').textContent = "Por favor, digite um e-mail válido."; 
-//         password.style.border = '1px solid red';
-//         document.getElementById('passwordError').textContent = 'Campo deve conter no minimo 8 caracteres, entre letras maiúsculas, minúsculas, numeros e caracteres especiais.'
-//         event.preventDefault();
-//     }
-    
-
-// });
-
 
 
 
