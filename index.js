@@ -6,7 +6,7 @@ const containerLancamentos = document.querySelector('[data-lancamentos]');
 
 async function buscarTodosProdutos(){
     try{
-        const api = await fetch("http://localhost:3000/produtos");
+        const api = await fetch("https://backend-cosmetics-sepia.vercel.app/produtos");
         const produtos = await api.json();
 
         produtos.forEach((produto) => {   
@@ -196,6 +196,8 @@ function addCart() {
 
 
 }
+
+module.exports = {calculatorDiscount, buscarTodosProdutos};
 
 
 
