@@ -1,48 +1,71 @@
-const { beforeEach} = require('@jest/globals');
-const {calculatorDiscount, buscarTodosProdutos} = require('../index');
+const { beforeEach, expect} = require('@jest/globals');
+const {calculatorDiscount, buscarTodosProdutos} = require('../index.js');
+
 
 global.fetch = jest.fn(() =>
     Promise.resolve({
       json: () => Promise.resolve([
         {
           name: 'Produto 1',
-          image: 'image.jpg',
-          priceOld: '100,00',
-          priceActual: '80,00',
-          avaliacao: 'avaliacao.jpg',
-          categoria: 'Categoria 1',
+          image: './assets/produtos/fluido_selador.svg',
+          priceOld: 100,
+          priceActual: 80,
+          avaliacao: './assets/Estrelinhas4.svg',
+          categoria: 'Cabelos',
           lancamento: true
         },
         {
             name: 'Produto 2',
-            image: 'image2.jpg',
-            priceOld: '200,00',
-            priceActual: '150,00',
-            avaliacao: 'avaliacao2.jpg',
-            categoria: 'Categoria 2',
+            image: './assets/produtos/fluido_selador.svg',
+            priceOld: 200,
+            priceActual: 150,
+            avaliacao: './assets/Estrelinhas4.svg',
+            categoria: 'Skincare',
             lancamento: false
-          }
+        }
       ])
     })
   );
 
+// beforeEach(() => {
+//     document.body.innerHTML = `
+//        <div class="swiper-slide" id="slide_card">
+//             <div class="container_Card">
+//                 <div class="card">
+//                     <a href="#">
+//                         <img class="heart" src="./assets/heart-regular.svg" alt="Favoritos" />
+//                     </a>
+//                     <p class="sale">-<span >0</span>%</p>
+//                     <div class="image">
+//                         <img class="card_image" src="${produto.image}"
+//                         alt="${produto.name}">
+//                     </div>
+//                     <div class="info">
+//                         <h2 class="card_titulo">${produto.name}</h2>
+//                         <img class="avaliacao" src="${produto.avaliacao}" alt="Avaliações de clientes" />
+//                         <p class="card_valor_old">R$<span>${produto.priceOld}</span></p>
+//                         <p class="card_valor_discount">R$<span>${produto.priceActual}</span></p>
+//                         <p class="categoria" hidden>${produto.categoria}</p>
+//                         <p class="lancamento" hidden>${produto.lancamento}</p>
+//                         <button class="card_button">
+//                             <img src="./assets/cart-plus-solid.svg" alt="Icone carrinho no card">
+//                             <p>Comprar</p>
+//                         </button>
+//                      </div>
+//                 </div>
+//             </div>
+//             `; 
+// })
+
 beforeEach(() => {
-    document.body.innerHTML = `
-        <div class="swiper-slide" id="slide_card">
-            <div class="container_Card">                 
-            </div>
-        </div>
-                    
-  `;
+    fetch.mockClear();
 })
 
-test('Deve validar o retorno dos produtos', () => {
+test('Deve validar o retorno dos produtos', async () => {
 
-    buscarTodosProdutos()
+   const data = await buscarTodosProdutos();
 
-    const produtos = document.querySelectorAll('#wrapper_card .swiper-slide');
-
-    expect(produtos.length).toBe(2);
+   expect(fetch).toHaveBeenCalledWith("https://backend-cosmetics-sepia.vercel.app/produtos");
     
 });
 

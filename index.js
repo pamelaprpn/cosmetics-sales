@@ -89,7 +89,7 @@ async function buscarTodosProdutos(){
         });
 
     } catch(error){
-        containerCard.innerHTML = `<p> Houve um erro ao carregar produtos: ${error} </p> `
+        containerProdutos.innerHTML = `<p> Houve um erro ao carregar produtos: ${error} </p> `
     }
 
 }
