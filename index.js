@@ -132,15 +132,14 @@ function callSwiper(){
             el: '.swiper-pagination',
             type: 'bullets',
         },
-      
-    
+        
     });
 
     const swiperCard = new Swiper('#card_swiper', {
         grabCursor: true,
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
+        navigation:{
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
         },
         breakpoints: {
             640: {
@@ -158,7 +157,7 @@ function callSwiper(){
                
             },
             1300: {
-                slidesPerView: 4,
+                slidesPerView: 3,
                 spaceBetween: 30
             }
         },

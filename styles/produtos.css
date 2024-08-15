@@ -12,6 +12,8 @@
     align-items: center;
 }
 
+
+
 #card_swiper{  
     padding-top: 5rem;
     padding-bottom: 3rem;
@@ -24,8 +26,10 @@
     height: auto;
 }
 
-#scrollbar_card{
-    display: none;
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 24px; 
+    color: var(--cor-verde); 
 }
 
 .title_section{
@@ -167,7 +171,7 @@
     #card_swiper{      
         width: 60%; 
     }
-    
+
     #slide_card{
         height: auto;
     }
