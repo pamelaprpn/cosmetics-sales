@@ -7,8 +7,9 @@
     width: 100%;
     margin-left: 0;   
     margin-right: 0;
-    
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #card_swiper{  
@@ -40,8 +41,9 @@
     position: relative;  
     display: flex;
     flex-direction: column; 
-    justify-content: space-between; 
+    justify-content: space-around;  
     height: 35rem;
+    width: 16rem;
 }
 
 .sale{
@@ -65,7 +67,10 @@
 
 .image{
     width: 100%;
-    bottom: -20px;   
+    bottom: -20px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;  
 }
 
 .card_image{
@@ -88,14 +93,20 @@
     padding: 1em;
 }
 
+.card_prices{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
 .avaliacao{
     padding-bottom: 10px;
 }
 
 .card_valor_old{
     color: var(--cor-cinza);
-    text-decoration:line-through;
-    margin-right: 2.5rem;   
+    text-decoration:line-through;   
 }
 
 .card_valor_discount{
@@ -134,6 +145,11 @@
     color: white;
 }
 
+.error{
+    color: var(--cor-cinza);
+    text-align: center;
+}
+
 @media screen and (max-width: 480px){ 
     .container_section{
         padding-bottom: 1rem;
@@ -157,7 +173,7 @@
     }
 
     .card{
-        width: 10rem;
+        width: 8rem;
         height: 20rem;
     }
 
@@ -186,7 +202,7 @@
     }
 
     .card_image{
-        width: 100%;       
+        width: 80%;       
     }
 
     .card_titulo{
@@ -200,6 +216,14 @@
 
     .card_valor{
         font-size: 1rem;
+    }
+
+    .card_valor_discount{
+        font-size: 1rem;
+    }
+
+    .card_valor_old{
+        font-size: .7rem;
     }
 
     .card_button{
@@ -238,6 +262,10 @@
     
     #slide_card{
         height: auto;
+    }
+
+    .card{
+        width: 15rem
     }
 
 }

@@ -1,6 +1,5 @@
 const { beforeEach, expect} = require('@jest/globals');
-const {calculatorDiscount, buscarTodosProdutos} = require('../index.js');
-
+const {calculatorDiscount, buscarTodosProdutos} = require('../index');
 
 global.fetch = jest.fn(() =>
     Promise.resolve({
@@ -26,6 +25,20 @@ global.fetch = jest.fn(() =>
       ])
     })
   );
+
+
+test('Deve validar o retorno dos produtos', async () => {
+
+   const data = await buscarTodosProdutos();
+
+   console.log(data)
+
+   expect(data).toHaveBeenCalledWith("https://backend-cosmetics-sepia.vercel.app/produtos");
+    
+});
+
+
+
 
 // beforeEach(() => {
 //     document.body.innerHTML = `
@@ -57,17 +70,6 @@ global.fetch = jest.fn(() =>
 //             `; 
 // })
 
-beforeEach(() => {
-    fetch.mockClear();
-})
-
-test('Deve validar o retorno dos produtos', async () => {
-
-   const data = await buscarTodosProdutos();
-
-   expect(fetch).toHaveBeenCalledWith("https://backend-cosmetics-sepia.vercel.app/produtos");
-    
-});
 
 
 // test('Deve calcular o desconto e atualizar o DOM', () => {

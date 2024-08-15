@@ -48,6 +48,10 @@
     font-size: 12px;
 }
 
+.info_item:hover{
+    text-decoration: underline;
+}
+
 .container_img{
     display: flex;
     justify-content: center;
