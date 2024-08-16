@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-    <img src="./assets/layout.svg" alt="Image Example" >
+    <img src="./assets/layout.svg" alt="Image Project" >
 </p>
 
 <h2 id="about">📌 Sobre</h2>
@@ -31,9 +31,9 @@
 <h3>Pré - Requisitos</h3>
 
 
-- Para rodar localmente é necessário primeiro subir o servidor da api no repositorio https://github.com/pamelaprpn/backend_cosmetics.
+- Para rodar localmente é necessário primeiro subir o servidor da API no repositório https://github.com/pamelaprpn/backend_cosmetics.
 
-<h2 id="colab">🤝 Collaborators</h2>
+<h2 id="colab">🤝 Colaboradores</h2>
 
 <table>
     <tr>
