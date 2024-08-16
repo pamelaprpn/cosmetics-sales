@@ -6,6 +6,7 @@ const containerLancamentos = document.querySelector('[data-lancamentos]');
 
 async function buscarTodosProdutos(){
     try{
+
         const api = await fetch("https://backend-cosmetics-sepia.vercel.app/produtos");
         const produtos = await api.json();
 
@@ -215,13 +216,16 @@ function calculatorDiscount() {
 function addCart() {
     let elementAddCart = document.querySelector(".icon_count");
     
-    let count = 0;
- 
+    let count = parseInt(localStorage.getItem('cartCount')) || 0;
+    
+    elementAddCart.textContent = count;
+    
     document.querySelectorAll(".card_button").forEach(button => {
         button.addEventListener('click', () => {
             
             count = count + 1;
             elementAddCart.textContent = count;
+            localStorage.setItem('cartCount', count);
 
         });
     });
