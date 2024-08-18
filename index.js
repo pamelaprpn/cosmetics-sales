@@ -86,7 +86,7 @@ async function buscarTodosProdutos(){
         document.querySelectorAll('#link_user').forEach(value => {
             value.addEventListener('click', function(event){
                 event.preventDefault();
-                window.location.href = "../page/login.html";  
+                window.location.href = "./login.html";  
             })
         });
 
@@ -233,7 +233,7 @@ function addCart() {
 
 }
 
-module.exports = {calculatorDiscount, buscarTodosProdutos};
+
 
 
 

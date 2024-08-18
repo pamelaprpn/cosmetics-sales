@@ -5,7 +5,7 @@ const btnEnviarModalForgetPassword = document.querySelector('.forgetpassword_but
 const inputEmailModalForgetPassword = document.querySelector('.inputEmailModal');
 const email = document.getElementById("email");
 const password = document.getElementById("password");
-const btnLogin = document.querySelector('.btn_login');
+const btnLogin = document.getElementById("buttonForm");
 const logo = document.getElementById('logoHome');
 
 email.addEventListener('input', validateEmail());
@@ -13,84 +13,117 @@ password.addEventListener('input', validadeSenha());
 
 logo.addEventListener('click', function(event){
     event.preventDefault();
-    window.location.href = "index.html";
+    window.location.href = "./index.html";
 })
 
 
-//Validar campo de e-mail dentro da modal Esqueci minha senha
-inputEmailModalForgetPassword.addEventListener('blur', function () {
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-   
-    if (!emailPattern.test(inputEmailModalForgetPassword.value)) {
-        document.getElementById('emailErrorModal').style.display = 'block';
-        this.style.border = '1px solid red';
-        document.getElementById('emailErrorModal').textContent = "Por favor, digite um e-mail válido.";
-    } else {
-        this.style.border = 'none';
+document.addEventListener('DOMContentLoaded', () => {
+
+    //Abrir modal pelo elemento Esqueci minha senha
+    btnOpenModalForgetPassword.addEventListener('click', function (event) {
+        event.preventDefault();
+        modalForgetPassword.style.display = 'block';
+        limparModalForguetPassword();
+
+
+    });
+
+    //Fechar modal Esqueci minha senha  quando clicar fora da modal
+    window.addEventListener('click', function (event) {
+        if (event.target == modalForgetPassword) {
+            modalForgetPassword.style.display = 'none';
+            limparModalForguetPassword();
+        }
+    });
+
+    //Fechar modal Esqueci minha senha quando recarregar página
+    window.onload = function () {
+        modalForgetPassword.style.display = 'none';
+        limparModalForguetPassword();
+    };
+
+    //Fechar modal Esqueci minha senha quando clicar no close
+    closeModalForgetPassword.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        modalForgetPassword.style.display = 'none';
+        limparModalForguetPassword();
+
+    });
+
+    //Função para limpar o form da modal de Esqueci minha senha
+    function limparModalForguetPassword() {
+        inputEmailModalForgetPassword.value = '';
+        inputEmailModalForgetPassword.style.border = 'none';
         document.getElementById('emailErrorModal').style.display = 'none';
     }
-});
 
-//Abrir modal pelo elemento Esqueci minha senha
-btnOpenModalForgetPassword.addEventListener('click', function(event){
-    event.preventDefault();   
-        modalForgetPassword.style.display = 'block'; 
-        limparModalForguetPassword;            
-      
-   
-});
-
-//Função para limpar o form da modal de Esqueci minha senha
-function limparModalForguetPassword(){
-    inputEmailModalForgetPassword.value = '';
-    inputEmailModalForgetPassword.style.border = 'none';
-    document.getElementById('emailErrorModal').style.display = 'none';
-}
-
-
-//Fechar modal Esqueci minha senha quando clicar no close
-closeModalForgetPassword.addEventListener('click', function(event){
-    event.preventDefault();
- 
-    modalForgetPassword.style.display = 'none'; 
-    limparModalForguetPassword(); 
-        
-});
-
-
-
-//Fechar modal Esqueci minha senha  quando clicar fora da modal
-window.addEventListener('click', function(event){
-    if(event.target == modalForgetPassword) {
-        modalForgetPassword.style.display = 'none'
-        limparModalForguetPassword();
+    //Função para limpar o form da modal de Esqueci minha senha
+    function limparModalForguetPassword() {
+        inputEmailModalForgetPassword.value = '';
+        inputEmailModalForgetPassword.style.border = 'none';
+        document.getElementById('emailErrorModal').style.display = 'none';
     }
+
+    //Validar campo de e-mail dentro da modal Esqueci minha senha
+    inputEmailModalForgetPassword.addEventListener('blur', function () {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(inputEmailModalForgetPassword.value)) {
+            document.getElementById('emailErrorModal').style.display = 'block';
+            this.style.border = '1px solid red';
+            document.getElementById('emailErrorModal').textContent = "Por favor, digite um e-mail válido.";
+        } else {
+            this.style.border = 'none';
+            document.getElementById('emailErrorModal').style.display = 'none';
+        }
+    });
+
+    //Limpar form quando clicar em Enviar na modal de Esqueci minha senha
+    btnEnviarModalForgetPassword.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        const emailForgetValue = inputEmailModalForgetPassword.value.trim()
+
+        limparModalForguetPassword();
+
+        if (emailForgetValue == '') {
+            alert('Os campos e-mail e senha são obrigatórios.');
+        }
+
+    })
+
 });
 
-//Fechar modal Esqueci minha senha quando recarregar página
-window.onload = function(){
-    modalForgetPassword.style.display = 'none';
-    limparModalForguetPassword();
-};
+
  
 //Limpar form quando clicar em login
-btnLogin.addEventListener('click', function(event){
+
+btnLogin.addEventListener('click', (event) => {
+
     event.preventDefault();
 
-    email.style.border = 'none'
-    document.getElementById('emailError').style.display = 'none';
-    email.value = '';
-    password.style.border = 'none'
-    document.getElementById('passwordError').style.display = 'none';
-    password.value = '';
+    const emailValue = email.value.trim();
+    const passwordValue = password.value.trim();
+
+    if (emailValue !== '' && passwordValue !== '') {
+        localStorage.setItem('userEmail', email.value);
+        
+        email.style.border = 'none'
+        document.getElementById('emailError').style.display = 'none';
+        email.value = '';
+        password.style.border = 'none'
+        document.getElementById('passwordError').style.display = 'none';
+        password.value = '';
+
+    } else {
+        alert('Os campos e-mail e senha são obrigatórios.');
+    }
+
+    
 });
 
-//Limpar form quando clicar em Enviar na modal de Esqueci minha senha
-btnEnviarModalForgetPassword.addEventListener('click', function(event){
-    event.preventDefault();
 
-    limparModalForguetPassword();
-})
 
 //função que valida o input e-mail login
 function validateEmail() {

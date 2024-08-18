@@ -58,6 +58,7 @@ body{
 }
 
 #email,
+#emailForget,
 #password{
     width: 60%;
     border-radius: 5px;
@@ -72,7 +73,8 @@ body{
     text-align: center; 
 }
 
-#buttonForm{
+#buttonForm,
+#buttonFormForget{
     width: 60%;
     border-radius: 5px;
     height: 2rem;
@@ -122,7 +124,8 @@ button:disabled{
 
 
 /* Style modal esqueci minha senha */
-.modal{
+
+.modal {
     display: 'none';
     position: fixed;
     z-index: 1;
@@ -130,16 +133,16 @@ button:disabled{
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
-.modal_content{
+.modal_content {
     background: var(--cor-fundo);
     margin: 15% auto;
     padding: 20px;
     border: 1px solid var(--cor-cinza);
     border-radius: 10px;
-    width: 30%; 
+    width: 30%;
 }
 
 .close {
@@ -147,14 +150,14 @@ button:disabled{
     float: right;
     font-size: 28px;
     font-weight: bold;
-   
+
 }
 
 .close:hover,
 .close:focus {
-  color: var(--cor-laranja);
-  text-decoration: none;
-  cursor: pointer;
+    color: var(--cor-laranja);
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .modal_content h2{
